@@ -1,0 +1,32 @@
+.form {
+    width: 70%;
+    margin: auto;
+}
+
+.heading {
+    margin-bottom: 20px
+}
+
+.action-button {
+    margin: 20px;
+}
+
+.form-control {
+    margin-top: 10px;
+}
+
+.simple-text {
+    color:black;
+    font-weight: bold;
+}
+
+.final-buttons {
+    display: flex;
+    justify-content: center;
+    gap:15px;
+    margin-top: 20px;
+}
+
+.card-item{
+    margin-top: 1em;
+}
