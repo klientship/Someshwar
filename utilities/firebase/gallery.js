@@ -1,5 +1,5 @@
 import { storage } from "./firebase";
-import { listAll, ref } from "firebase/storage";
+import { listAll, ref, getDownloadURL } from "firebase/storage";
 
 export const firebaseGetAllGalleryImages = async()=>{
     console.log("process started");
@@ -7,11 +7,17 @@ export const firebaseGetAllGalleryImages = async()=>{
     const listRef = ref(storage, 'galleryImages/');
     try{
         const res = await listAll(listRef);
-        res.items.forEach((itemRef)=>{
-            imagePaths.push(itemRef.fullPath);
+        res.items.forEach(async(itemRef)=>{
+            const url = await getDownloadURL(itemRef);
+            imagePaths.push(url);
         });
-        console.log("IMAGE PATHS IS:", imagePaths);
+         console.log("IMAGE PATHS IS:", imagePaths);
+        return imagePaths;
     }catch(error){
         console.log(error);
     }
+}
+
+const getImageUrl = async()=>{
+
 }

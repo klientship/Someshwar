@@ -21,6 +21,7 @@ const Gallery = (props) => {
     // }
 
     const images = JSON.parse(props.images);
+    console.log(images);
 
   return (
     <AdminLayout page="gallery">
@@ -31,14 +32,25 @@ const Gallery = (props) => {
 
 export async function getServerSideProps (context){
   const res = await firebaseGetAllGalleryImages();
-    console.log("Inside RES, got images");
-    const images = await JSON.stringify(res);
+   if(res){
+    const images = JSON.stringify(res);
+    console.log("RES exists, ",res);
     return {
         props:{
         images,
         status:true
         }
     }
+   }else{
+    console.log("RES who");
+    return {
+      props:{
+      images:[],
+      status:true
+      }
+  }
+   }
+    
 
 }
 
