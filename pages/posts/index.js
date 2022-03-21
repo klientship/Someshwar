@@ -18,7 +18,7 @@ const Posts = (props) => {
                                         <a href="blog-detail.html" className="image no-roll-effect">
                                             <h3>{post.title}</h3>
                                             <div className="bg-transfer">
-                                                <img src={post.image} alt="" />
+                                                <img src={post.image} width="100%" height="100%" alt="article"/>
                                             </div>
                                         </a>
                                         <figure className="date"><i className="icon_clock_alt"></i>{moment(post.date).fromNow()}</figure>
