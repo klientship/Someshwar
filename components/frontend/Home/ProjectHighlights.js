@@ -2,6 +2,7 @@ import Image from 'next/image'
 import {SimpleGrid} from '@mantine/core';
 
 const ProjectHighlights = () => {
+   
   return (
     <div className="block" id="about" style={{width:"75%", margin:'auto', marginTop:"2em"}} >
         <div className="container">
