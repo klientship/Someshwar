@@ -1,6 +1,7 @@
 import Image from 'next/image'
 
 const ProjectHighlights = () => {
+   
   return (
     <div className="block" id="about" style={{width:"75%", margin:'auto', marginTop:"2em"}} >
         <div className="container">

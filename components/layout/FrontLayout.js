@@ -6,6 +6,8 @@ import HomeArticlesSection from '../frontend/Home/HomeArticlesSection'
 import ProjectHighlights from '../frontend/Home/ProjectHighlights'
 import Footer from '../frontend/UI/Footer'
 import SiteHeader from '../frontend/UI/SiteHeader'
+import NearByPlace from '../frontend/Home/NearByPlace'
+import Specification from '../frontend/Home/specification'
 
 const FrontLayout = () => {
   return (
@@ -18,6 +20,8 @@ const FrontLayout = () => {
           <ProjectHighlights />
           <Amenities />
           <FeaturedVideo />
+          <NearByPlace />
+          <Specification />
       </div>
       <Footer />
     </div>
