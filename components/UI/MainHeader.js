@@ -1,7 +1,6 @@
-import { Header, MediaQuery, Burger, ThemeIcon } from '@mantine/core';
+import { Header, MediaQuery, Burger } from '@mantine/core';
 // import config from '../../config';
-import {MdDashboard} from "react-icons/md";
-
+import Image from 'next/image';
 const MainHeader = ({opened,setOpened}) => {
   return (
     <Header height={60} p="xs">
@@ -15,9 +14,8 @@ const MainHeader = ({opened,setOpened}) => {
             />
             </MediaQuery>
 
-            <ThemeIcon variant="light" radius="xl" size="xl" color="teal">
-                <MdDashboard />
-            </ThemeIcon><h3 style={{marginLeft:"20px"}}>Yamuna Asha City</h3>
+            <Image src="/static/img/yamuna logo.png" height="70%" width="140px" /> 
+            <h3 style={{marginLeft:"20px"}}>Website Management Dashboard</h3>
         </div>
     </Header>
   )

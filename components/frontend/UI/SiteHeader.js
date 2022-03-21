@@ -7,7 +7,7 @@ const SiteHeader = () => {
     <header id="page-header">
       <SiteNav />
       <HomeBanner />
-      </header>
+    </header>
   )
 }
 

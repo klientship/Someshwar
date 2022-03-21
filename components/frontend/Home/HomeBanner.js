@@ -11,30 +11,10 @@ const HomeBanner = () => {
               <br />
               Residential Gated Community Layout
             </h1>
-            <form className="animate" id="form-hero">
-              <label htmlFor="form-hero-email">
-                Enter your email for the latest news
-              </label>
-              <div className="row">
-                <div className="col-md-5 col-sm-5">
-                  <div className="input-group">
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="form-hero-email"
-                      name="email"
-                      placeholder="Your email"
-                      required=""
-                    />
-                    <span className="input-group-btn">
-                      <button className="btn" type="submit">
-                        <i className="arrow_right"></i>
-                      </button>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </form>
+            <p  className="animate">
+                  Rera Number:<br />
+                  PRM/KA/RERA/1257/334/PR/190913/002849
+              </p>
           </div>
         </div>
       </div>

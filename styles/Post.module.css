@@ -1,0 +1,41 @@
+.leftcolumn {   
+    
+    width: 75%;
+    margin: auto;
+  }
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .card {
+     background-color: white;
+     padding: 20px;
+     margin-top: 20px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .row{
+      margin-top: 100px;
+      margin-bottom: 100px;
+
+  }
+
+  .row h2 {
+      margin: 0;
+  }
+  
+  
+  @media screen and (max-width: 800px) {
+    .leftcolumn {   
+      width: 100%;
+      padding: 0;
+      
+    }
+  }

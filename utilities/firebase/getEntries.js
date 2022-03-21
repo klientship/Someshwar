@@ -1,8 +1,7 @@
-import { collection, getDocs, orderBy, query, where} from "firebase/firestore"; 
+import { collection, getDocs, orderBy, query, where, limit} from "firebase/firestore"; 
 import {db} from './firebase';
 
 export const firebaseGetAllPosts = async()=>{
-    console.log("Stared get");
     const entriesRef = collection(db, "posts");
     const querySnapshot = await getDocs(query(entriesRef,orderBy("date", "desc")));
     const myEntries = [];
@@ -13,8 +12,18 @@ export const firebaseGetAllPosts = async()=>{
     return myEntries;
 }
 
+export const firebasePostsForHome = async()=>{
+    const entriesRef = collection(db, "posts");
+    const querySnapshot = await getDocs(query(entriesRef,orderBy("date", "desc"),limit(3)));
+    const myEntries = [];
+    querySnapshot.forEach((doc) => {
+        myEntries.push({id: doc.id, ...doc.data()});
+    });
+    console.log(myEntries);
+    return myEntries;
+}
+
 export const getSingleEntry = async(slug)=>{
-    console.log("sindei single entry: ",slug);
     const result = query(collection(db,"posts"), where("slug", "==", slug));
     const querySnapshot = await getDocs(result);
     const myArray = [];
