@@ -2,14 +2,15 @@ import { Button, Card, Grid } from '@mantine/core';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { getImageUrl } from '../../utilities/firebase/gallery';
-import Image from 'next/image';
 import MultiFileUploader from '../UI/MultiFileUploader';
 import GalleryImage from './GalleryImage';
+
 const GridPage = (props) => {
   const [images, setImages] = useState([]);
   const [showDropZone, setShowDropZone] = useState(false);
 
   useEffect(()=>{
+    setImages([]);
     props.images.forEach(image => {
       localGetImageUrl(image);
     })

@@ -2,10 +2,14 @@ import { useState, useEffect } from 'react';
 import { getImageUrl } from '../../../utilities/firebase/gallery';
 import { SimpleGrid } from '@mantine/core';
 import Image from 'next/image';
+
 const HomeGallery = (props) => {
     const [images, setImages] = useState([]);
-    console.log("Inside homegallery: ",props.images);
-    const propImages = props.images;
+    
+    let propImages = props.images;
+    if(!propImages){
+      propImages = [];
+    }
     useEffect(()=>{
         propImages.forEach(image => {
           localGetImageUrl(image);

@@ -6,17 +6,22 @@ import FeaturedVideo from '../components/frontend/Home/FeaturedVideo'
 import HomeArticlesSection from '../components/frontend/Home/HomeArticlesSection'
 import HomeGallery from '../components/frontend/Home/HomeGallery'
 import ProjectHighlights from '../components/frontend/Home/ProjectHighlights'
+import NearByPlace from '../components/frontend/Home/NearByPlace'
+import Specification from '../components/frontend/Home/specification'
 
 export default function Home(props) {
   const posts = JSON.parse(props.posts);
   const images = JSON.parse(props.images);
+
 
   return (
     <FrontLayout>
        <HomeArticlesSection posts={posts} />
         <ProjectHighlights />
         <Amenities />
+          <Specification />
         <HomeGallery images={images} />
+        <NearByPlace />
         <FeaturedVideo />
     </FrontLayout>
   )

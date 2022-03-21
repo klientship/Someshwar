@@ -7,7 +7,7 @@ const SiteNav = () => {
     <div className="container">
     <div className="wrapper">
       <div className="left">
-      <Link href="/" className="brand"
+      <a href="/" className="brand"
         >
         <Image 
             src="/static/img/logo.png"
@@ -15,13 +15,13 @@ const SiteNav = () => {
             width="150px"
             height="84px"
         />
-      </Link>
+      </a>
       </div>
       <div className="right">
       <ul className="nav navigation-links animate">
         <li><Link href="/#page-top" className="scroll">Home</Link></li>
-        <li><Link href="/#about" className="scroll">About</Link></li>
-        <li><Link href="/#gallery" className="scroll">Gallery</Link></li>
+        <li><a href="/posts" className="scroll">Articles</a></li>
+        <li><a href="/gallery" className="scroll">Gallery</a></li>
         <li><Link href="/#pricing" className="scroll">Pricing</Link></li>
         <li><Link href="/#contact" className="scroll">Contact</Link></li>
       </ul>

@@ -8,9 +8,9 @@ const NearByPlace = () => {
             <div className="gallery" data-scroll-reveal="enter bottom and move 20px">
                 <div className="row">
                     <div className="col-md-4 col-sm-4 text-center ">
-                        <a href="/static/img/near_place/surathkal" className="gallery-item image-popup">
+                        <a href="/static/img/near_place/surathkal.jpg" className="gallery-item image-popup">
                             <div className="image bg-transfer">
-                                <img src="/static/img/near_place/surathkal" alt=""/>
+                                <img src="/static/img/near_place/surathkal.jpg" alt=""/>
                             </div>
                             
                         </a>
@@ -20,9 +20,9 @@ const NearByPlace = () => {
                    
                     
                     <div className="col-md-4 col-sm-4 text-center">
-                        <a href="/static/img/near_place/airport" className="gallery-item image-popup">
+                        <a href="/static/img/near_place/airport.jpg" className="gallery-item image-popup">
                             <div className="image bg-transfer">
-                                <img src="/static/img/near_place/airport" alt=""/>
+                                <img src="/static/img/near_place/airport.jpg" alt=""/>
                             </div>
                         </a>
                         MANGALORE INTERNATIONAL AIRPORT 12KM
@@ -30,9 +30,9 @@ const NearByPlace = () => {
                     </div>
                     
                     <div className="col-md-4 col-sm-4 text-center">
-                        <a href="/static/img/near_place/" className="gallery-item image-popup">
+                        <a href="/static/img/near_place/ryaninternationalschool.jpg" className="gallery-item image-popup">
                             <div className="image bg-transfer">
-                                <img src="/static/img/near_place/" alt=""/>
+                                <img src="/static/img/near_place/ryaninternationalschool.jpg" alt=""/>
                             </div>
                         </a>
                         RYAN INTERNATIONAL SCHOOL 0.5KM

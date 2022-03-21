@@ -8,7 +8,7 @@ const WebLayout = (props) => {
     <header id="page-header">
       <SiteNav />
     </header>
-    <div id="page-content">
+    <div id="page-content" style={{paddingTop:"30px"}}>
        {props.children}
     </div>  
     <Footer />

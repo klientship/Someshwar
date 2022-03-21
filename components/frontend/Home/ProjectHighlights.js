@@ -4,7 +4,7 @@ import {SimpleGrid} from '@mantine/core';
 const ProjectHighlights = () => {
    
   return (
-    <div className="block" id="about" style={{width:"75%", margin:'auto', marginTop:"2em"}} >
+    <div className="block" id="about" style={{width:"75%", margin:'auto'}} >
         <div className="container">
 	        <h2 className='text-center'>Project <span style={{color:"#9F292B"}}>Highlight</span></h2>
             <div className="row">

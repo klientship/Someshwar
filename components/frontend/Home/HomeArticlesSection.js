@@ -2,6 +2,10 @@ import Image from 'next/image'
 import moment from 'moment';
 import Link from 'next/link';
 const HomeArticlesSection = (props) => {
+  let posts = [];
+  if(props.posts){
+    posts = props.posts;
+  }
   return (
     
     <div className="block" id="features">
@@ -9,13 +13,13 @@ const HomeArticlesSection = (props) => {
       <h2>Articles:</h2>
       <div className="row">
         
-          {props.posts.map((article, index) => (
+          {posts.map((article, index) => (
             <div key={index} className="col-md-4 col-sm-4">
             <div className="blog-item">
               <a href="blog-detail.html" className="image no-roll-effect">
                 <h3>{article.title}</h3>
                 <div className="bg-transfer">
-                  <img src={article.image} width="100%" height="100%" alt="article"/>
+                  <img src={article.imageUrl} width="100%" height="100%" alt="article"/>
                 {/* <Image src="/static/img/feature-image-01.jpg" width="100%" height="100%" alt="article" /> */}
                 </div>
               </a>
