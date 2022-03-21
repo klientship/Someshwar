@@ -1683,7 +1683,6 @@ hr {
   position: relative;
   display: block;
   overflow: hidden;
-  margin-bottom: 30px;
 }
 .gallery .gallery-item:hover:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);

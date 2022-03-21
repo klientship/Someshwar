@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const HomeGallery = (props) => {
     const [images, setImages] = useState([]);
-    
+
     let propImages = props.images;
     if(!propImages){
       propImages = [];
@@ -30,7 +30,11 @@ const HomeGallery = (props) => {
     <div className="block" id="gallery">
     <div className="container">
         <h2>Gallery.</h2>
-        <SimpleGrid cols={4} spacing="xs">
+        <SimpleGrid cols={4} spacing="xs"   breakpoints={[
+        { maxWidth: 980, cols: 3, spacing: 'md' },
+        { maxWidth: 755, cols: 2, spacing: 'sm' },
+        { maxWidth: 600, cols: 2, spacing: 'sm' },
+      ]}>
             {images.map((image, index)=>(
             <div key={index}>
                 <Image src={image.url} width={400} height={400} alt="gallery image" />
@@ -38,7 +42,7 @@ const HomeGallery = (props) => {
             ))}
            
         </SimpleGrid>
-        {!props.allPage && <div className="text-center">
+        {!props.allPage && <div className="text-center" style={{marginTop:"1em"}}>
           <a className="btn btn-rounded btn-primary" href="/gallery">View More</a>
         </div>}
         

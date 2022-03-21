@@ -16,13 +16,13 @@ export default function Home(props) {
 
   return (
     <FrontLayout>
-       <HomeArticlesSection posts={posts} />
-        <ProjectHighlights />
-        <Amenities />
-          <Specification />
-        <HomeGallery images={images} />
-        <NearByPlace />
-        <FeaturedVideo />
+      <FeaturedVideo />
+      <ProjectHighlights />
+      <HomeArticlesSection posts={posts} />
+      <Amenities />
+      <Specification />
+      <HomeGallery images={images} />
+      <NearByPlace />
     </FrontLayout>
   )
 }

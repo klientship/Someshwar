@@ -22,8 +22,8 @@ const SiteNav = () => {
         <li><Link href="/#page-top" className="scroll">Home</Link></li>
         <li><a href="/posts" className="scroll">Articles</a></li>
         <li><a href="/gallery" className="scroll">Gallery</a></li>
-        <li><Link href="/#pricing" className="scroll">Pricing</Link></li>
-        <li><Link href="/#contact" className="scroll">Contact</Link></li>
+        <li><a href="/#pricing" className="scroll">Pricing</a></li>
+        <li><a href="/#contact" className="scroll">Contact</a></li>
       </ul>
       <div className="nav-btn">
         <figure></figure>

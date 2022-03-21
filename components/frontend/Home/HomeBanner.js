@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HomeBanner = () => {
   return (
-    <div className="hero-section background-is-dark">
+    <div className="hero-section background-is-dark" id="homepage-banner">
       <div className="wrapper">
         <div className="hero-title">
           <div className="container">
@@ -29,7 +29,7 @@ const HomeBanner = () => {
         <div className="hero-slide">
           <div className="bg-transfer">
             <Image
-              src="/static/img/gallery-big-04.jpg"
+              src="/static/img/hero-image.jpg"
               width="100%"
               height="100%"
               alt=""
@@ -39,7 +39,7 @@ const HomeBanner = () => {
         <div className="hero-slide">
           <div className="bg-transfer">
             <Image
-              src="/static/img/gallery-big-01.jpg"
+              src="/static/img/hero-image.jpg"
               width="100%"
               height="100%"
               alt=""
@@ -49,7 +49,7 @@ const HomeBanner = () => {
         <div className="hero-slide">
           <div className="bg-transfer">
             <Image
-              src="/static/img/gallery-big-02.jpg"
+              src="/static/img/hero-image.jpg"
               width="100%"
               height="100%"
               alt=""

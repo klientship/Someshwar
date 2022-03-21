@@ -1,6 +1,10 @@
+import { Button } from '@mantine/core'
 import React from 'react'
 
 const Specification = () => {
+  const downloadFile = () => {
+    window.location.href = "/static/files/Brochure.pdf"
+  }
   return (
     <div className="block background-is-dark" id="about">
     <div className="container">
@@ -21,9 +25,11 @@ const Specification = () => {
                   <li>24-hour water supply with overhead tank.</li>
                  
                 </ul>
-                
+                <Button color={"red"} onClick={downloadFile}>
+                  <i style={{marginRight:"0.5em"}} className="fa fa-download"></i> Download Brochure
+                </Button>
             </div>
-            <h2>Pricing.</h2>
+            <h2 className='pricing-section-heading'>Pricing.</h2>
             <div className="col-md-3 col-sm-3">
               <div className="price-box framed promoted" data-scroll-reveal="enter bottom and move 20px after 0.2s">
                 
