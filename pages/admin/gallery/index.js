@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import AdminLayout from '../../../components/layout/AdminLayout'
 import { firebaseGetAllGalleryImages } from '../../../utilities/firebase/gallery';
 
-import GridPage from '../../../components/grid/GridPage';
+import GridPage from '../../../components/gallery/GridPage';
 
 const Gallery = (props) => {
     // const [images, setImages]= useState([]);

@@ -3,7 +3,7 @@ import styles from '../../styles/Form.module.css';
 import { useRouter } from 'next/router';
 import ErrorMessage from '../UI/ErrorMessage';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 import { logIntoFireBase } from '../../utilities/firebase/auth';
 
 const LoginForm = () => {
@@ -54,6 +54,7 @@ const LoginForm = () => {
 
   return (
     <form className={styles.form} onSubmit={loginHandler}>
+      <Image src="/static/img/yamuna logo.png" height="70%" width="140px" />
         <h3 className={styles.heading}>Welcome To Yamuna Asha City Dashboard Login</h3>
         {error && !error.status && error.source === "OTHER" && (
             <ErrorMessage message={error.message} />
