@@ -15,7 +15,8 @@ const HomeArticlesSection = (props) => {
               <a href="blog-detail.html" className="image no-roll-effect">
                 <h3>{article.title}</h3>
                 <div className="bg-transfer">
-                <Image src="/static/img/feature-image-01.jpg" width="100%" height="100%" alt="article" />
+                  <img src='/static/card_background_4.jpg' width="100%" height="100%" alt="article"/>
+                {/* <Image src="/static/img/feature-image-01.jpg" width="100%" height="100%" alt="article" /> */}
                 </div>
               </a>
               <figure className="date">

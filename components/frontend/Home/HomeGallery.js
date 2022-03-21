@@ -4,12 +4,13 @@ import { SimpleGrid } from '@mantine/core';
 import Image from 'next/image';
 const HomeGallery = (props) => {
     const [images, setImages] = useState([]);
-    console.log(images);
+    console.log("Inside homegallery: ",props.images);
+    const propImages = props.images;
     useEffect(()=>{
-        props.images.forEach(image => {
+        propImages.forEach(image => {
           localGetImageUrl(image);
         })
-      },[]);
+      },[propImages]);
     
       const localGetImageUrl = (image)=>{
         getImageUrl(image._location.path_)
@@ -33,10 +34,10 @@ const HomeGallery = (props) => {
             ))}
            
         </SimpleGrid>
-        
-        <div className="text-center">
+        {!props.allPage && <div className="text-center">
           <a className="btn btn-rounded btn-primary" href="/gallery">View More</a>
-        </div>
+        </div>}
+        
     </div>
 </div>
   )
