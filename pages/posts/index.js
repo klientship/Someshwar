@@ -13,12 +13,12 @@ const Posts = (props) => {
                     <div style={{width:"100%", margin:"auto"}} >
                         {
                             posts.map((post, index)=>(
-                                <div key={index} className="col-md-3 col-sm-3 " style={{border:"2px solid grey",paddingTop:"10px",paddingBottom:"10px",margin:"1em", height:"35em", borderRadius:"1.5em"}}>
+                                <div key={index} className="col-md-3 col-sm-3 " style={{border:"2px solid grey",paddingTop:"10px",paddingBottom:"10px",margin:"1em", borderRadius:"1.5em"}}>
                                     <div className="blog-item">
                                         <a href="blog-detail.html" className="image no-roll-effect">
                                             <h3>{post.title}</h3>
                                             <div className="bg-transfer">
-                                                <img src={post.image} width="100%" height="100%" alt="article"/>
+                                                <img src={post.imageUrl} width="100%" height="100%" alt="article"/>
                                             </div>
                                         </a>
                                         <figure className="date"><i className="icon_clock_alt"></i>{moment(post.date).fromNow()}</figure>

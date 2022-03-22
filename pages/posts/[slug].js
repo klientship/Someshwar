@@ -15,13 +15,14 @@ const ViewPost = (props) => {
                 <div className={styles.card}>
                     <a href='/'><span><i className="fa fa-arrow-left"></i> Go Back</span></a>
                     <h2>{post.title}</h2>
-                    <h5>{moment(post.date).fromNow()}</h5>
+                    <h5>Posted {moment(post.date).fromNow()}</h5>
                     <div style={{textAlign:"center"}}>
                         <Image src={post.imageUrl} width="500px" height="500px" alt={post.title} />
 
                     </div>
-                    <p dangerouslySetInnerHTML={{__html: post.body}}>
-                    </p>
+                    <div>
+                        <p style={{fontWeight:"bold"}} dangerouslySetInnerHTML={{__html: post.body}}></p>
+                    </div>
                 </div>
                 </div>
             </div>

@@ -8,7 +8,6 @@ export const firebaseGetAllPosts = async()=>{
     querySnapshot.forEach((doc) => {
         myEntries.push({id: doc.id, ...doc.data()});
     });
-    console.log(myEntries);
     return myEntries;
 }
 
@@ -19,7 +18,6 @@ export const firebasePostsForHome = async()=>{
     querySnapshot.forEach((doc) => {
         myEntries.push({id: doc.id, ...doc.data()});
     });
-    console.log(myEntries);
     return myEntries;
 }
 
