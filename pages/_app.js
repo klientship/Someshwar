@@ -10,8 +10,8 @@ import SiteScripts from './scripts';
 
 function MyApp({ Component, pageProps }) {
   return <NotificationsProvider>
-            <SiteScripts />
             <Component {...pageProps} />
+            <SiteScripts />
 
           </NotificationsProvider>
 }

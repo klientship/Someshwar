@@ -9,8 +9,7 @@ const SiteNav = () => {
     <div className="container">
     <div className="wrapper">
       <div className="left">
-      <Link href="/" scroll={true} passHref>
-        <a className="brand" >
+        <a className="brand" href="/" >
           <Image 
               src="/static/img/logo.png"
               alt="nothing"
@@ -18,20 +17,15 @@ const SiteNav = () => {
               height="84px"
           />
         </a>
-      </Link>
       </div>
       <div className="right">
       <ul className="nav navigation-links animate">
-        <li><Link href="/#page-top" className="scroll">Home</Link></li>
+        <li><a href="/" className="scroll">Home</a></li>
         <li>
-          <Link href="/posts" passHref scroll={true}>
-            <a  className="scroll">Articles</a>
-          </Link>
+            <a  href="/posts" className="scroll">Articles</a>
         </li>
         <li>
-         <Link href="/gallery">
-            <a  className="scroll">Gallery</a>
-        </Link>
+            <a href="/gallery" className="scroll">Gallery</a>
         </li>
         <li>
           <Link href="/#pricing">

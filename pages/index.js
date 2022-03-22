@@ -8,18 +8,22 @@ import HomeGallery from '../components/frontend/Home/HomeGallery'
 import ProjectHighlights from '../components/frontend/Home/ProjectHighlights'
 import NearByPlace from '../components/frontend/Home/NearByPlace'
 import Specification from '../components/frontend/Home/specification'
-import { useRouter } from 'next/dist/client/router'; 
+import { useRouter } from 'next/router'; 
 import dynamic from "next/dynamic";
 const SiteScripts = dynamic(()=> import('./scripts'), {ssr:false});
+import { useEffect } from 'react';
+import Head from 'next/head';
+const x = 0;
 
 export default function Home(props) {
   const posts = JSON.parse(props.posts);
   const images = JSON.parse(props.images);
 
+  
 
   return (
     <FrontLayout>
-      <SiteScripts />
+    
       <FeaturedVideo />
       <ProjectHighlights />
       <HomeArticlesSection posts={posts} />
