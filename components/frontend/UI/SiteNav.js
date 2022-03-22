@@ -31,7 +31,7 @@ const SiteNav = () => {
             <a href="/#pricing" className="scroll">Pricing</a>
         </li>
         <li>
-          <a href="/#contact"className="scroll">Contact</a>
+          <a href="/contact"className="scroll">Contact</a>
         </li>
       </ul>
       <div className="nav-btn">

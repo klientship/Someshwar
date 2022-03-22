@@ -39,10 +39,12 @@ const HomeArticlesSection = (props) => {
       
       </div>
 
-        <div className="text-center">
-          <Link  href="/posts"><a
-                className="btn btn-rounded btn-primary arrow"
-                >View More</a></Link>
+        <div className="text-center" style={{marginTop:"1em"}}>
+          <a
+            href="/posts"  
+            className="btn btn-rounded  btn-primary" 
+            style={{backgroundColor:"#9F292B", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
+          >View More</a>
         </div>
     </div>
   </div>

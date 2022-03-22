@@ -43,8 +43,13 @@ const HomeGallery = (props) => {
            
         </SimpleGrid>
         {!props.allPage && <div className="text-center" style={{marginTop:"1em"}}>
-          <Link  href="/gallery"><a className="btn btn-rounded btn-primary">View More</a></Link>
+          <a 
+            className="btn btn-rounded btn-primary" 
+            href="/gallery" 
+            style={{backgroundColor:"#9F292B", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
+          >View More</a>
         </div>}
+
         
     </div>
 </div>
