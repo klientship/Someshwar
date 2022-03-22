@@ -18,7 +18,7 @@ const Posts = (props) => {
                             posts.map((post, index)=>(
                                 <div key={index} className="col-md-3 col-sm-3 " style={{border:"2px solid grey",paddingTop:"10px",paddingBottom:"10px",margin:"1em", borderRadius:"1.5em"}}>
                                     <div className="blog-item">
-                                        <a href="blog-detail.html" className="image no-roll-effect">
+                                        <a href={`/posts/${post.slug}`} className="image no-roll-effect">
                                             <h3>{post.title}</h3>
                                             <div className="bg-transfer">
                                                 <img src={post.imageUrl} width="100%" height="100%" alt="article"/>

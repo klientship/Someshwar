@@ -28,14 +28,10 @@ const SiteNav = () => {
             <a href="/gallery" className="scroll">Gallery</a>
         </li>
         <li>
-          <Link href="/#pricing">
-            <a  className="scroll">Pricing</a>
-            </Link>
+            <a href="/#pricing" className="scroll">Pricing</a>
         </li>
         <li>
-          <Link href="/#contact">
-            <a  className="scroll">Contact</a>
-          </Link>
+          <a href="/#contact"className="scroll">Contact</a>
         </li>
       </ul>
       <div className="nav-btn">

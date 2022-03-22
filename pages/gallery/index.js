@@ -10,7 +10,7 @@ const Gallery = (props) => {
     }
   return (
     <WebLayout>
-        <HomeGallery images={images} />
+        <HomeGallery images={images} allPage={true} />
     </WebLayout>
   )
 }

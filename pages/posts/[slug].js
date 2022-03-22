@@ -13,7 +13,7 @@ const ViewPost = (props) => {
             <div className={styles.row}>
                 <div className={styles.leftcolumn}>
                 <div className={styles.card}>
-                    <Link href='/'><a><span><i className="fa fa-arrow-left"></i> Go Back</span></a></Link>
+                    <a href='/'><span><i className="fa fa-arrow-left"></i> Go Back</span></a>
                     <h2>{post.title}</h2>
                     <h5>Posted {moment(post.date).fromNow()}</h5>
                     <div style={{textAlign:"center"}}>
