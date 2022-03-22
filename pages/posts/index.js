@@ -2,10 +2,14 @@ import React from 'react'
 import WebLayout from '../../components/layout/WebLayout'
 import { firebaseGetAllPosts } from '../../utilities/firebase/getEntries';
 import moment from 'moment';
+import dynamic from "next/dynamic";
+const SiteScripts = dynamic(()=> import('../scripts'), {ssr:false});
+
 const Posts = (props) => {
     const posts = JSON.parse(props.posts);
   return (
       <WebLayout>
+        <SiteScripts />
         <div className="block" id="features" style={{marginTop:"3em"}}>
             <div className="container m-auto">
                 <h2 style={{marginBottom:"0px"}}>Articles:</h2>

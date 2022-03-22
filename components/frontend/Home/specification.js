@@ -44,11 +44,11 @@ const Specification = () => {
                   
                 </div>
                 
-                <div className="price-box-footer">
+                {/* <div className="price-box-footer">
                   <a href="" className="btn btn-rounded btn-primary">Contact us</a>
                     
                  
-                </div>
+                </div> */}
               </div>
               </div>
              
@@ -67,11 +67,11 @@ const Specification = () => {
                  
                 </div>
                 
-                <div className="price-box-footer">
+                {/* <div className="price-box-footer">
                   <a href="" className="btn btn-rounded btn-primary" >Contact us</a>
                     
                   
-                </div>
+                </div> */}
               </div>
               
             </div>

@@ -1,12 +1,14 @@
 import Image from "next/image";
-
+import Link from "next/link";
 const Footer = () => {
   return (
     <footer id="page-footer" className="block background-is-dark">
     <div className="container">
-    <a href="#" className="brand">
+    <Link href="/" >
+      <a className="brand">
         <Image src="/static/img/logo.png" width="150px" height="100%" alt="" />
       </a>
+    </Link>
       <div className="row">
         <div className="col-md-4 col-sm-12">
         

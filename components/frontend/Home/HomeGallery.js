@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getImageUrl } from '../../../utilities/firebase/gallery';
 import { SimpleGrid } from '@mantine/core';
 import Image from 'next/image';
-
+import Link from 'next/link';
 const HomeGallery = (props) => {
     const [images, setImages] = useState([]);
 
@@ -43,7 +43,7 @@ const HomeGallery = (props) => {
            
         </SimpleGrid>
         {!props.allPage && <div className="text-center" style={{marginTop:"1em"}}>
-          <a className="btn btn-rounded btn-primary" href="/gallery">View More</a>
+          <Link  href="/gallery"><a className="btn btn-rounded btn-primary">View More</a></Link>
         </div>}
         
     </div>
