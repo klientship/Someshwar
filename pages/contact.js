@@ -9,17 +9,17 @@ const Contact = () => {
     const onSubmitHandler = async(e)=>{
         e.preventDefault();
         const nameVal = nameInputRef.current.value;
-        const emailVal = nameInputRef.current.value;
-        const messageVal = nameInputRef.current.value;
+        const emailVal = emailInputRef.current.value;
+        const messageVal = messageInputRef.current.value;
         if(nameVal && emailVal && messageVal){
-            const message = `${nameVal} sent a message: ${messageVal}. Thier Email ${emailVal}`;
+            const message = `Hello, <p>A new message was Sent from the contact form of Yamuna Asha City Website. <br /><div>${nameVal} sent a message:</div> <p>${messageVal}</p>. <strong>Thier Email:  ${emailVal}</strong></p>`;
             const data = await fetch('/api/contact/email',{
                 method:"POST",
                 headers:{
                     'Content-Type': 'application/json'
                 },
                 body:JSON.stringify({
-                    body: message
+                    message: message
                 })
             });
            
