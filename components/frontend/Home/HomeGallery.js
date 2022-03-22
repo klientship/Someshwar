@@ -37,7 +37,7 @@ const HomeGallery = (props) => {
       ]}>
             {images.map((image, index)=>(
             <div key={index}>
-                <Image src={image.url} width={400} height={400} alt="gallery image" />
+                <Image src={image.url} width={400} height={400} alt="gallery image"   objectFit='cover' />
              </div>
             ))}
            
