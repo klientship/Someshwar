@@ -1,16 +1,20 @@
-import { Card, Grid, TextInput, Button, useMantineColorScheme } from "@mantine/core";
+import { Card, Grid, TextInput, Button, SimpleGrid } from "@mantine/core";
 import {useState, useEffect} from "react";
 import dynamic from "next/dynamic";
-const BodyEditor = dynamic(()=> import('../UI/RichTextEditor'), {ssr:false})
-import { DatePicker } from "@mantine/dates";
+
 import styles from "../../styles/Form.module.css";
 import ImageUploader from "../UI/ImageUploader";
 
 const PostCreate = (props) => {
-    const [title, setTitle] = useState("");
-    const [date, setDate] = useState(new Date().toLocaleDateString('en-US'));
-    const [body, setBody]= useState('');
-    const [imageUrl, setImageUrl]=useState(null);
+    const [bhk, setBhk] = useState("");
+    const [sqfeet, setSqfeet] = useState("");
+    const [landSize, setLandSize] = useState("");
+    const [price, setPrice] = useState("");
+
+    const [imageOneUrl, setImageOneUrl]=useState(null);
+    const [imageTwoUrl, setImageTwoUrl]=useState(null);
+    const [imageThreeUrl, setImageThreeUrl]=useState(null);
+    const [imageFourUrl, setImageFourUrl]=useState(null);
 
 
     const existingPost = props.existingPost;
@@ -18,23 +22,22 @@ const PostCreate = (props) => {
     useEffect(()=>{
         if(existingPost){
             console.log("Existing post exists")
-            setTitle(existingPost.title);
-            setDate(existingPost.date);
-            setImageUrl(existingPost.imageUrl);
-            setBody(existingPost.body);
+            setBhk(existingPost.bhk);
+            setSqfeet(existingPost.sqfeet);
+            setLandSize(existingPost.landSize);
+            setPrice(existingPost.price);
         }
     },[existingPost]);
 
 
     const onSubmitHandler =(event)=>{
         event.preventDefault();
-        if(title && date && body){
-            console.log({title, date, body, imageUrl});
+        if(bhk && sqfeet && landSize && price){
             let id = null;
             if(existingPost){
                 id = existingPost.id;
             }
-            props.onSubmitHandler(id, title, date, body, imageUrl);
+            props.onSubmitHandler(id, bhk, sqfeet, landSize, price, imageOneUrl, imageTwoUrl, imageThreeUrl, imageFourUrl);
         }else{
             // Todo: Add validation steps here
             console.log("Validation failure");
@@ -44,35 +47,52 @@ const PostCreate = (props) => {
 
     return (
         <form onSubmit={onSubmitHandler}>
-            <Grid>
-                <Grid.Col span={8}>
-                    <Card shadow="sm" padding="xl" style={{overflow:"visible", zIndex:1000}}>
-                        <BodyEditor setEditorContent={setBody} initialContent={body} />
-                    </Card>
-                </Grid.Col>
-                <Grid.Col span={4}>
-                <Card
-                    style={{ height: "100%" }}
-                    shadow="sm"
-                    padding="xl"
-                    >
-                        <TextInput 
-                            placeholder="The Title For The Article" 
-                            label="Topic:" 
-                            value={title || ""}
-                            onChange={(event)=>setTitle(event.currentTarget.value)}
-                        />
-                        <DatePicker
-                            className={styles['card-item']}
-                            label="Date:"
-                            defaultValue={new Date()}
-                            placeholder="5th of September"
-                            value={date}
-                            onChange={(value)=>setDate(value)}
+
+                    <Card shadow="sm" padding="xl" style={{overflow:"visible", zIndex:1000, width:"70%", margin:"auto"}}>
+                    <TextInput 
+                            label="BHK:" 
+                            value={bhk || ""}
+                            onChange={(event)=>setBhk(event.currentTarget.value)}
                         />
                         <div className={styles['card-item']}>
-                            <label>Article Image:</label>
-                            <ImageUploader setUrl={setImageUrl} url={imageUrl} />
+                            <TextInput 
+                                label="Sq Feet:" 
+                                value={sqfeet || ""}
+                                onChange={(event)=>setSqfeet(event.currentTarget.value)}
+                            />
+                        </div>
+                        <div className={styles['card-item']}>
+                            <TextInput 
+                                label="Land Size:" 
+                                value={landSize || ""}
+                                onChange={(event)=>setLandSize(event.currentTarget.value)}
+                            />
+                        </div>
+                        <div className={styles['card-item']}>
+                            <TextInput 
+                                type="number"
+                                label="Price:" 
+                                value={price || ""}
+                                onChange={(event)=>setPrice(event.currentTarget.value)}
+                            />
+                        </div>
+                        <div className={styles['card-item']}>
+                            <h3 style={{marginBottom:"10px"}}>Article Images</h3>
+                        <SimpleGrid cols={4} spacing="lg">
+                            <div>
+                                <ImageUploader setUrl={setImageOneUrl} url={imageOneUrl} />
+                            </div>
+                            <div>
+                                <ImageUploader setUrl={setImageTwoUrl} url={imageTwoUrl} />
+                            </div>
+                            <div>
+                                <ImageUploader setUrl={setImageThreeUrl} url={imageThreeUrl} />
+                            </div>
+                            <div>
+                                <ImageUploader setUrl={setImageFourUrl} url={imageFourUrl} />
+                            </div>
+                        </SimpleGrid>
+                         
                         </div>
 
                         <div className={styles['final-buttons']}>
@@ -85,8 +105,7 @@ const PostCreate = (props) => {
                             </Button>
                         </div>
                     </Card>
-                </Grid.Col>
-            </Grid>
+                
         </form>
     );
 };

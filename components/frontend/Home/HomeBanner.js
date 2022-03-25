@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import { Button } from "@mantine/core";
 const HomeBanner = () => {
   return (
     <div className="hero-section background-is-dark" id="homepage-banner">
@@ -15,6 +15,14 @@ const HomeBanner = () => {
                   Rera Number:<br />
                   PRM/KA/RERA/1257/334/PR/190913/002849
               </p>
+              <Button sx={(theme)=>({
+                backgroundColor: '#9F292B',
+                '&:hover':{
+                  backgroundColor: theme.colors.red[7]
+                }
+              })}>:
+                <i style={{marginRight:"0.5em"}} className="fa fa-download"></i> Download Brochure
+            </Button>
           </div>
         </div>
       </div>

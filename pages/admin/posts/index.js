@@ -7,7 +7,6 @@ const Posts = (props) => {
   return (  
     <AdminLayout page="posts">
        <PostsIndex posts={posts} />
-
     </AdminLayout>
   )
 }
@@ -21,7 +20,6 @@ export async function getServerSideProps (context){
                 status:true
             }
         }
-
     }
     else{
         return {

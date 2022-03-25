@@ -7,8 +7,8 @@ import { useMantineTheme } from '@mantine/core';
 const MenuOption = ({color, label, icon, to, onClick, selected}) => {
     const router = useRouter();
     const appTheme = useMantineTheme();
-    let buttonColor = appTheme.colorScheme === 'dark' ? appTheme.colors.dark[6] : appTheme.colors.violet[0];
-    const hoverColor = appTheme.colorScheme === 'dark' ? appTheme.colors.dark[6] : appTheme.colors.orange[0];
+    let buttonColor = appTheme.colorScheme === 'dark' ? appTheme.colors.dark[6] : appTheme.colors.blue[5];
+    const hoverColor = appTheme.colorScheme === 'dark' ? appTheme.colors.dark[6] : appTheme.colors.blue[9];
 
     if(selected){
         buttonColor = hoverColor;
@@ -31,7 +31,7 @@ const MenuOption = ({color, label, icon, to, onClick, selected}) => {
         width: '100%',
         padding: theme.spacing.xs,
         borderRadius: "0px 10px 10px 0px",
-        color: theme.colorScheme === 'dark' ? theme.colors.dark[0] : theme.black,
+        color: theme.colorScheme === 'dark' ? theme.colors.white[0] : theme.white,
         marginTop:'10px',
         marginRight:'20px',
         backgroundColor: buttonColor,

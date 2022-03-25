@@ -13,10 +13,11 @@ const PostRow = ({post, deleteClickHandler}) => {
     }
 
   return (
-    <tr key={post.id}>
-    <td>{post.title}</td>
-    <td>{moment(post.date).fromNow()}</td>
-    <td>{post.snippet}</td>
+    <tr>
+    <td>{post.bhk}</td>
+    <td>{post.sqfeet}</td>
+    <td>{post.landSize}</td>
+    <td>{post.price}</td>
     <td>
         <Menu>
             <Menu.Item 

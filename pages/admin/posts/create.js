@@ -12,9 +12,9 @@ const Create = () => {
         router.replace('/admin/posts');
     }
 
-    const formSubmitHandler = async (id, title, date, body, imageUrl)=>{
+    const formSubmitHandler = async (id, bhk, sqfeet, landSize, price, imageOneUrl, imageTwoUrl, imageThreeUrl, imageFourUrl)=>{
         const result = await firebaseCreatePost({
-            title, date: date.toString(), body, imageUrl
+            bhk, sqfeet, landSize, price, imageOneUrl, imageTwoUrl, imageThreeUrl, imageFourUrl
         });
         if(result){
             notifications.showNotification({

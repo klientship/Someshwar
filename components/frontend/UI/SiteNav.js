@@ -22,13 +22,13 @@ const SiteNav = () => {
       <ul className="nav navigation-links animate">
         <li><a href="/" className="scroll">Home</a></li>
         <li>
-            <a  href="/posts" className="scroll">Articles</a>
+            <a  href="/#about" className="scroll">Overview</a>
         </li>
         <li>
             <a href="/gallery" className="scroll">Gallery</a>
         </li>
         <li>
-            <a href="/#pricing" className="scroll">Pricing</a>
+            <a  href="/posts" className="scroll">Villas</a>
         </li>
         <li>
           <a href="/contact"className="scroll">Contact</a>

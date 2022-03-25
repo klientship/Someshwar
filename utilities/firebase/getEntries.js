@@ -2,7 +2,7 @@ import { collection, getDocs, orderBy, query, where, limit} from "firebase/fires
 import {db} from './firebase';
 
 export const firebaseGetAllPosts = async()=>{
-    const entriesRef = collection(db, "posts");
+    const entriesRef = collection(db, "villas");
     const querySnapshot = await getDocs(query(entriesRef,orderBy("date", "desc")));
     const myEntries = [];
     querySnapshot.forEach((doc) => {
@@ -12,7 +12,7 @@ export const firebaseGetAllPosts = async()=>{
 }
 
 export const firebasePostsForHome = async()=>{
-    const entriesRef = collection(db, "posts");
+    const entriesRef = collection(db, "villas");
     const querySnapshot = await getDocs(query(entriesRef,orderBy("date", "desc"),limit(3)));
     const myEntries = [];
     querySnapshot.forEach((doc) => {
@@ -22,7 +22,7 @@ export const firebasePostsForHome = async()=>{
 }
 
 export const getSingleEntry = async(slug)=>{
-    const result = query(collection(db,"posts"), where("slug", "==", slug));
+    const result = query(collection(db,"villas"), where("slug", "==", slug));
     const querySnapshot = await getDocs(result);
     const myArray = [];
     querySnapshot.forEach((doc) => {

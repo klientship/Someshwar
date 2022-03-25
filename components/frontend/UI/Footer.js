@@ -37,8 +37,8 @@ const Footer = () => {
             </figure>
 
             <figure style={{marginTop:"1em"}}> <i  style={{color:"#E67F10"}} className="fa fa-phone"></i> +91-9741735307, +91-9448912515</figure>
-            <figure style={{marginTop:"1em"}}> <i style={{color:"#E67F10"}} className="fa fa-envelope-o"></i> <a href="mailto:info@vajrarealties.com"
-                >info@vajrarealties.com</a
+            <figure style={{marginTop:"1em"}}> <i style={{color:"#E67F10"}} className="fa fa-envelope-o"></i> <a href="mailto:sales@vajrarealties.com"
+                >sales@vajrarealties.com</a
               ></figure>
            
           </div>

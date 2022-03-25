@@ -15,18 +15,18 @@ const PostsIndex = ({posts}) => {
     }
   return (
       <>
-      <h2 style={{margin:"0 1em 0 0", display:"inline"}}>Posts</h2>
-      <Button onClick={createPostHandler} color="grape">Create Post</Button>
+      <h2 style={{margin:"0 1em 0 0", display:"inline"}}>Villas</h2>
+      <Button onClick={createPostHandler} color="grape">Create New Villa</Button>
      
       <div className=''>
       </div>
        <Table highlightOnHover>
             <thead>
                 <tr>
-                    <th>Post Title</th>
-                    <th>Creation Date</th>
-                    <th>Body</th>
-                    <th>Actions</th>
+                    <th>BHK</th>
+                    <th>Sq Feet</th>
+                    <th>Land Size</th>
+                    <th>Price</th>
                 </tr>
             </thead>
             <tbody>

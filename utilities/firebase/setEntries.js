@@ -2,16 +2,8 @@ import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 import {db} from "./firebase";
 
 export const firebaseCreatePost = async(post)=>{
-    const snippet = generateSnippet(post.body);
-    const slug = generateSlug(post.title);
-
-    const finalPost = {
-        ...post,
-        snippet,
-        slug
-    }
     try {
-        const docRef = await addDoc(collection(db, "posts"), finalPost);
+        const docRef = await addDoc(collection(db, "villas"), post);
         return docRef.id;
       } catch (e) {
         console.error("Error adding document: ", e);
@@ -29,7 +21,7 @@ export const firebaseUpdatePost = async(id, post)=>{
         slug
     }
 
-    await setDoc(doc(db, "posts", id), finalPost);
+    await setDoc(doc(db, "villas", id), finalPost);
     return 1;
 }
 
