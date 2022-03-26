@@ -20,7 +20,10 @@ const HomeBanner = () => {
                 '&:hover':{
                   backgroundColor: theme.colors.red[7]
                 }
-              })}>:
+              })}
+              component="a"
+              href="/download-brochure"
+              >
                 <i style={{marginRight:"0.5em"}} className="fa fa-download"></i> Download Brochure
             </Button>
           </div>

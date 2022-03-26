@@ -49,11 +49,11 @@ const Contact = () => {
                 </div>
         </p>
        </div>
-        <Grid>
-            <Grid.Col span={6}>
+        <Grid justify="center">
+            <Grid.Col lg={6} sm={12}>
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.5530163793715!2d74.84415011525995!3d12.872121270535057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba35bbd2c54e3b5%3A0x83916e4204893738!2sVAJRA%20REALTIES!5e0!3m2!1sen!2sin!4v1647942528295!5m2!1sen!2sin" 
-                        width="600" 
+                        width="100%" 
                         height="450" 
                         style={{border:"3px solid #9F292B"}}
                         allowFullScreen="" 
@@ -61,7 +61,7 @@ const Contact = () => {
                                     
                     </iframe>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col lg={4} sm={12} >
                 <form onSubmit={onSubmitHandler}>
                 <TextInput
                     ref={nameInputRef}
