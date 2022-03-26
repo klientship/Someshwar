@@ -1,9 +1,9 @@
-import { collection, getDocs, orderBy, query, where, limit} from "firebase/firestore"; 
+import { collection, getDocs, orderBy, query, where, limit, doc, getDoc} from "firebase/firestore"; 
 import {db} from './firebase';
 
 export const firebaseGetAllPosts = async()=>{
     const entriesRef = collection(db, "villas");
-    const querySnapshot = await getDocs(query(entriesRef,orderBy("date", "desc")));
+    const querySnapshot = await getDocs(entriesRef);
     const myEntries = [];
     querySnapshot.forEach((doc) => {
         myEntries.push({id: doc.id, ...doc.data()});
@@ -13,7 +13,7 @@ export const firebaseGetAllPosts = async()=>{
 
 export const firebasePostsForHome = async()=>{
     const entriesRef = collection(db, "villas");
-    const querySnapshot = await getDocs(query(entriesRef,orderBy("date", "desc"),limit(3)));
+    const querySnapshot = await getDocs(entriesRef);
     const myEntries = [];
     querySnapshot.forEach((doc) => {
         myEntries.push({id: doc.id, ...doc.data()});
@@ -21,15 +21,13 @@ export const firebasePostsForHome = async()=>{
     return myEntries;
 }
 
-export const getSingleEntry = async(slug)=>{
-    const result = query(collection(db,"villas"), where("slug", "==", slug));
-    const querySnapshot = await getDocs(result);
-    const myArray = [];
-    querySnapshot.forEach((doc) => {
-        myArray.push({id: doc.id, ...doc.data()});
-    });
-    if(myArray.length > 0)
-        return myArray[0]
-    else
+export const getSingleEntry = async(id)=>{
+    const docRef = doc(db,"villas", id);
+    const docSnap = await getDoc(docRef);
+
+    if(docSnap.exists()){
+        return {id: docSnap.id, ...docSnap.data()}
+    }else{
         return null;
+    }
 }

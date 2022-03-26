@@ -25,9 +25,9 @@ const Specification = () => {
                   <li>24-hour water supply with overhead tank.</li>
                  
                 </ul>
-                <Button color={"red"} onClick={downloadFile}>
+                {/* <Button color={"red"} onClick={downloadFile}>
                   <i style={{marginRight:"0.5em"}} className="fa fa-download"></i> Download Brochure
-                </Button>
+                </Button> */}
             </div>
             <h2  className='pricing-section-heading'>Pricing.</h2>
             <div  className="col-md-3 col-sm-3">
