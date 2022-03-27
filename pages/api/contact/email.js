@@ -3,7 +3,7 @@ const sgMail = require('@sendgrid/mail')
 export default function handler(req, res) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   const msg = {
-    to: "stephenmachado1998@gmail.com", 
+    to: "sales@vajrarealties.com", 
     from: 'developer@vawebsites.in', 
     subject: "Message From Yamuna Asha City Website",
     text:"A new message was Sent from the contact form of Yamuna Asha City Website",
