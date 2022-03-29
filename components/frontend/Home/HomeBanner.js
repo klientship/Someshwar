@@ -7,13 +7,13 @@ const HomeBanner = () => {
         <div className="hero-title">
           <div className="container">
             <h1 className="animate">
-              Yamuna Asha City:
+              Someshwar Vista:
               <br />
-              Residential Gated Community Layout
+              Kulashekar, Mangaluru
             </h1>
             <p  className="animate">
                   Rera Number:<br />
-                  PRM/KA/RERA/1257/334/PR/190913/002849
+                  PRM/KA/RERA/1257/334/PR/180507/001647
               </p>
               <Button sx={(theme)=>({
                 backgroundColor: '#9F292B',

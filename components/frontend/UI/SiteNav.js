@@ -28,7 +28,7 @@ const SiteNav = () => {
             <a href="/gallery" className="scroll">Gallery</a>
         </li>
         <li>
-            <a  href="/posts" className="scroll">Villas</a>
+            <a  href="/posts" className="scroll">Floor Plans</a>
         </li>
         <li>
           <a href="/contact"className="scroll">Contact</a>

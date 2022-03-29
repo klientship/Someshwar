@@ -8,16 +8,16 @@ const Amenities = () => {
         style={{ width: "75%", margin: "auto", marginTop: "2em" }}
       >
         <h2>Amenities</h2>
-        <SimpleGrid cols={5} spacing="xs" breakpoints={[
+        <SimpleGrid cols={4} spacing="xs" breakpoints={[
         { maxWidth: 980, cols: 3, spacing: 'md' },
         { maxWidth: 755, cols: 2, spacing: 'sm' },
         { maxWidth: 600, cols: 1, spacing: 'sm' },
       ]}>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/002-car-parking.svg"
-              width="40px"
-              height="100%"
+              src="/static/img/amenities/002-car-parking.png"
+              width="70px"
+              height="70%"
               alt="car parking"
             />
             <br />
@@ -25,9 +25,9 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/003-cctv-cameras.svg"
-              width="40px"
-              height="100%"
+              src="/static/img/amenities/elevator.png"
+              width="70px"
+              height="70%"
               alt="CCTV Cameras"
             />
             <br />
@@ -35,9 +35,9 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/004-club-house.svg"
-              width="40px"
-              height="100%"
+              src="/static/img/amenities/fire-extinguisher.png"
+              width="70px"
+              height="70%"
               alt="Club House"
             />
             <br />
@@ -45,9 +45,9 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/005-drainage-and-sewage-treatment.svg"
-              width="40px"
-              height="100%"
+              src="/static/img/amenities/intercom.png"
+              width="70px"
+              height="70%"
               alt="Club House"
             />
             <br />
@@ -55,9 +55,9 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/006-fire-safety.svg"
-              width="40px"
-              height="100%"
+              src="/static/img/amenities/lightbulb.png"
+              width="70px"
+              height="70%"
               alt="Fire Saftey"
             />
             <br />
@@ -65,9 +65,9 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/007-intercom.svg"
-              width="40px"
-              height="100%"
+              src="/static/img/amenities/shield (1).png"
+              width="70px"
+              height="70%"
               alt="Intercom"
             />
             <br />
@@ -75,44 +75,17 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/009-play-area.svg"
-              width="40px"
-              height="100%"
+              src="/static/img/amenities/playground.png"
+              width="70px"
+              height="70%"
               alt="Play Area"
             />
             <br />
             <p>PLAY AREA</p>
           </div>
-          <div className="amenitiesImage">
-          <Image
-              src="/static/img/amenities/010-security.svg"
-              width="40px"
-              height="100%"
-              alt="Security"
-            />
-            <br />
-            <p>SECURITY</p>
-          </div>
-          <div className="amenitiesImage">
-          <Image
-              src="/static/img/amenities/011-indoor-games.svg"
-              width="40px"
-              height="100%"
-              alt="Indoor Games"
-            />
-            <br />
-            <p>INDOOR GAMES</p>
-          </div>
-          <div className="amenitiesImage">
-          <Image
-              src="/static/img/amenities/013-gymnasium.svg"
-              width="40px"
-              height="100%"
-              alt="Gymnasium"
-            />
-            <br />
-            <p>GYMNASIUM</p>
-          </div>
+          
+          
+          
         </SimpleGrid>
 
 
