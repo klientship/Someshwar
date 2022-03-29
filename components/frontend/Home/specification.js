@@ -29,50 +29,15 @@ const Specification = () => {
                   <i style={{marginRight:"0.5em"}} className="fa fa-download"></i> Download Brochure
                 </Button> */}
             </div>
-            <h2  className='pricing-section-heading'>Pricing.</h2>
+          
             <div  className="col-md-3 col-sm-3">
-              <div className="price-box framed promoted" data-scroll-reveal="enter bottom and move 20px after 0.2s">
-                
-                
-              
-                
-                <h3>3BHK</h3>
-                
-                <div className="price">8500000/- rupees</div>
-                <div className="values">
-                  <figure>1600 ft.<sup>2</sup></figure>
-                  
-                </div>
-                
-                {/* <div className="price-box-footer">
-                  <a href="" className="btn btn-rounded btn-primary">Contact us</a>
-                    
-                 
-                </div> */}
-              </div>
+             
               </div>
              
             
             
             <div className="col-md-3 col-sm-3">
-              <div className="price-box framed" data-scroll-reveal="enter bottom and move 20px after 0.4s" >
-                
-               
-             
-                <h3>4BHK</h3>
-                
-                <div className="price">9500000/- rupees</div>
-                <div className="values">
-                  <figure>1950 ft.<sup>2</sup></figure>
-                 
-                </div>
-                
-                {/* <div className="price-box-footer">
-                  <a href="" className="btn btn-rounded btn-primary" >Contact us</a>
-                    
-                  
-                </div> */}
-              </div>
+            
               
             </div>
            

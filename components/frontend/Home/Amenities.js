@@ -21,7 +21,7 @@ const Amenities = () => {
               alt="car parking"
             />
             <br />
-            <p>CAR PARKING</p>
+            <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>CAR PARKING</p>
           </div>
           <div className="amenitiesImage">
             <Image
@@ -31,7 +31,7 @@ const Amenities = () => {
               alt="CCTV Cameras"
             />
             <br />
-            <p>CCTV CAMERAS</p>
+            <p  style={{fontWeight: "bold",fontFamily: "Montserrat"}}>LIFT</p>
           </div>
           <div className="amenitiesImage">
             <Image
@@ -41,7 +41,7 @@ const Amenities = () => {
               alt="Club House"
             />
             <br />
-            <p>CLUB HOUSE</p>
+            <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>FIRE SAFETY</p>
           </div>
           <div className="amenitiesImage">
             <Image
@@ -51,7 +51,7 @@ const Amenities = () => {
               alt="Club House"
             />
             <br />
-            <p>DRAINAGE AND SEWAGE TREATMENT</p>
+            <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>INTERCOM</p>
           </div>
           <div className="amenitiesImage">
             <Image
@@ -61,7 +61,7 @@ const Amenities = () => {
               alt="Fire Saftey"
             />
             <br />
-            <p>FIRE SAFETY</p>
+            <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>24HR BACKUP ELECTRICITY</p>
           </div>
           <div className="amenitiesImage">
             <Image
@@ -71,7 +71,7 @@ const Amenities = () => {
               alt="Intercom"
             />
             <br />
-            <p>INTERCOM</p>
+            <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>SECURITY</p>
           </div>
           <div className="amenitiesImage">
             <Image
@@ -81,7 +81,7 @@ const Amenities = () => {
               alt="Play Area"
             />
             <br />
-            <p>PLAY AREA</p>
+            <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>PLAY AREA</p>
           </div>
           
           
