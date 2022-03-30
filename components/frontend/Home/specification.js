@@ -6,14 +6,14 @@ const Specification = () => {
     window.location.href = "/static/files/Brochure.pdf"
   }
   return (
-    <div className="block background-is-dark" id="about">
+    <div className="block background-is-dark" style={{backgroundColor:"#EFFFFD"}} id="about">
     <div className="container" id="pricing">
         <h2>Specifications</h2>
         <div className="row">
             <div className="col-md-6 col-sm-6" data-scroll-reveal="enter left and move 20px" style={{margin:"auto"}}>
                 <ul>
-                  <li>24-hour security with cctv surveillance.</li>
-                  <li>Centralized sewage treatment plant (stp).</li>
+                  <li>Structural glazing curtain walls.</li>
+                  <li>ACP external grade.</li>
                   <li>Club house with Gym, Badminton court, swimming pool & with other indoor games.</li>
                   <li>Street light.</li>
                   <li>Undergroung  electricity cables with individual service trench for each site.</li>

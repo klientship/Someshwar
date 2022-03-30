@@ -5,7 +5,9 @@ const SiteNav = () => {
 
 
   return (
-    <nav className="navigation background-is-dark" style={{backgroundColor:"black"}}>
+    <nav className="navigation background-is-dark" style={{backgroundColor:"#0081ba"}}>
+      
+    
     <div className="container">
     <div className="wrapper">
       <div className="left">
