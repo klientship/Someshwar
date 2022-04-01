@@ -14,7 +14,7 @@ const Footer = () => {
     <div className="container">
     <Link href="/" >
       <a className="brand">
-        <Image src="/static/img/logo.png" width="150px" height="100%" alt="" />
+        <Image    src="/static/img/Someshwar VISTA Logo_1.png" width="150px" height="100%" alt="" />
       </a>
     </Link>
       <div className="row">
