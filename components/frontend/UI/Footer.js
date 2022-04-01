@@ -4,10 +4,10 @@ import { IoLogoFacebook, IoLogoInstagram} from  "react-icons/io5";
 import { ActionIcon } from "@mantine/core";
 const Footer = () => {
   const onFacebookClick = ()=>{
-    window.open('https://www.facebook.com/profile.php?id=100057574204399', '_blank');
+    window.open('https://www.facebook.com/', '_blank');
   }
   const onInstagramClick = ()=>{
-    window.open('https://instagram.com/yamuna_asha_city?utm_medium=copy_link', '_blank');
+    window.open('https://instagram.com/', '_blank');
   }
   return (
     <footer id="page-footer" className="block background-is-dark" style={{backgroundColor:"#0081ba"}}>
@@ -27,7 +27,24 @@ const Footer = () => {
           creating an expectional new community in the 
           Historic Beach City of Mangalore.
 
-       <div style={{marginTop:"1em"}}>
+          <div style={{marginTop:"1em", display:"flex", gap:"20px"}}>
+       <img 
+       onClick={onFacebookClick}
+              src="/static/img/facebook 2.png"
+              alt="nothing"
+              width="35px"
+              height="35px"
+          />
+          <img 
+          onClick={onInstagramClick}
+              src="/static/img/instagram 2.png"
+              alt="nothing"
+              width="35px"
+              height="35px"  
+          />
+</div>
+
+       {/* <div style={{marginTop:"1em"}}>
          <ActionIcon onClick={onFacebookClick} size="xl"  style={{display:'inline', marginRight:"1em"}}>
           <IoLogoFacebook  style={{fontSize:"2.5em"}}  />
          </ActionIcon>
@@ -36,7 +53,7 @@ const Footer = () => {
 
       </ActionIcon>
 
-       </div>
+       </div> */}
         </div>
         <div className="col-md-4 col-sm-12">
          
@@ -63,11 +80,16 @@ const Footer = () => {
       <hr />
       <div className="note">	&#169; 2022 All Rights Reserved</div>
       
-      <div className="to-top">
+      {/* <div className="to-top">
         <a href="#page-top" className="arrow-up framed scroll">
           <i className="arrow_up"></i>
+        
         </a>
-      </div>
+      </div> */}
+      {
+      <a href="https://api.whatsapp.com/send?phone=919741735307" class="float" target="_blank">
+					<i class="fa fa-whatsapp my-float"></i>
+					</a>}
     </div>
     <div className="background-wrapper">
       <div className="bg-transfer opacity-30">

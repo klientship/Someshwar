@@ -107,10 +107,10 @@ Headers:		'Montserrat', sans-serif;
   vertical-align: middle;
   position: relative;
 }
-.navigation .right .navigation-links {
+navigation .right .navigation-links {
   list-style: none;
   padding-left: 0;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
 }
 .navigation .right .navigation-links li {
@@ -3616,4 +3616,15 @@ form .status i {
   .version-selector .version .description {
     margin-left: 0;
   }
+
+  @media (min-width: 800px) {
+    .row.one {
+      margin: auto;
+      width: 121%;
+  }
+  }
+
+
+
+
 }

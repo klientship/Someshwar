@@ -5,7 +5,7 @@ const SiteNav = () => {
 
 
   return (
-    <nav className="navigation background-is-dark" style={{backgroundColor:"#0081ba"}}>
+    <nav className="navigation background-is-dark" style={{backgroundColor:"##012a5d"}}>
       
     
     <div className="container">
@@ -13,7 +13,7 @@ const SiteNav = () => {
       <div className="left">
         <a className="brand" href="/" >
           <Image 
-              src="/static/img/logo.png"
+              src="/static/img/Someshwar VISTA Logo_1.png"
               alt="nothing"
               width="150px"
               height="84px"

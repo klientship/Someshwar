@@ -7,7 +7,7 @@ const Amenities = () => {
         className="container text-center"
         style={{ width: "75%", margin: "auto", marginTop: "2em" }}
       >
-        <h2>Amenities</h2>
+        <h2 >Amenities</h2>
         <SimpleGrid cols={4} spacing="xs" breakpoints={[
         { maxWidth: 980, cols: 3, spacing: 'md' },
         { maxWidth: 755, cols: 2, spacing: 'sm' },

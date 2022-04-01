@@ -46,7 +46,7 @@ const HomeGallery = (props) => {
           <a 
             className="btn btn-rounded btn-primary" 
             href="/gallery" 
-            style={{backgroundColor:"#9F292B", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
+            style={{background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
           >View More</a>
         </div>}
 

@@ -11,7 +11,7 @@ const HomeArticlesSection = (props) => {
     
     <div className="block" id="features">
     <div className="container">
-      <h2>Villas:</h2>
+      <h2>Floor Plans:</h2>
       <div className="row">
         <SimpleGrid cols={3}
          breakpoints={[
@@ -30,9 +30,9 @@ const HomeArticlesSection = (props) => {
                     <h3>{villa.sqfeet} Sq.Feet</h3>
                     <h3>{villa.landSize} Land Size</h3>
                     <Button n sx={(theme)=>({
-                backgroundColor: '#9F292B',
+                backgroundColor: '#background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)"',
                 '&:hover':{
-                  backgroundColor: theme.colors.red[7]
+                  background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)"
                 }
               })}>View Details</Button>
                     </div>
@@ -49,7 +49,7 @@ const HomeArticlesSection = (props) => {
           <a
             href="/posts"  
             className="btn btn-rounded  btn-primary" 
-            style={{backgroundColor:"#9F292B", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
+            style={{background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
           >View More</a>
         </div> }
     </div>
