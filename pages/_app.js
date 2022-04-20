@@ -1,11 +1,11 @@
 import '../styles/globals.css';
 import { NotificationsProvider } from '@mantine/notifications';
 import Script from 'next/script';
-import '../public/static/css/magnific-popup.css';
-import '../public/static/bootstrap/css/bootstrap.css';
-import '../public/static/fonts/elegant-fonts.css';
-import '../public/static/fonts/font-awesome.css';
-import '../public/static/css/style.css';
+import '../public/css/magnific-popup.css';
+import '../public/bootstrap/css/bootstrap.css';
+import '../public/fonts/elegant-fonts.css';
+import '../public/fonts/font-awesome.css';
+import '../public/css/style.css';
 import SiteScripts from './scripts';
 
 function MyApp({ Component, pageProps }) {
