@@ -1,4 +1,4 @@
-const url = 'https://admin.yamunaashacity.com'
+const url = 'https://admin.someshwarvista.com'
 // const url = 'http://127.0.0.1:8000'
 
 export const getHomepageSettings = async()=>{
