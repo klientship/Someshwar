@@ -50,9 +50,9 @@ $(document).ready(function($) {
 
     $(window).scroll(function () {
         if ($(window).scrollTop() > 1 ) {
-            $(".navigation").addClass("show-background");
+            // $(".navigation").addClass("show-background");
         } else {
-            $(".navigation").removeClass("show-background");
+            // $(".navigation").removeClass("show-background");
         }
     });
 

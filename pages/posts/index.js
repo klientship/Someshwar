@@ -6,7 +6,7 @@ import Head from 'next/head';
 import HomeArticlesSection from '../../components/frontend/Home/HomeArticlesSection';
 
 
-import {getGalleryImages,getHomepageSettings} from '../../utilities/api';
+import {getVillas,getHomepageSettings} from '../../utilities/api';
 
 
 const Posts = (props) => {
@@ -18,7 +18,7 @@ const Posts = (props) => {
 
         <div className="block" id="features" style={{marginTop:"3em"}}>
             <div className="container m-auto">
-                <HomeArticlesSection posts={posts} allPage={true} />
+                <HomeArticlesSection villas={posts} allPage={true} />
             </div>
         </div>
       </WebLayout>
@@ -26,7 +26,7 @@ const Posts = (props) => {
 }
 
 export async function getServerSideProps (context){
-    const res = await firebaseGetAllPosts();
+    const res =  await getVillas();
     const settings = await getHomepageSettings();
 
     const props = {
