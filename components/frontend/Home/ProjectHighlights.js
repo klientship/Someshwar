@@ -11,7 +11,7 @@ const ProjectHighlights = (props) => {
   return (
     <div className="block" id="about" style={{width:"75%", margin:'auto'}} >
         <div className="container">
-	        <h2 className='text-center' >Project <span style={{background:"-webkit-linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);-webkit-background-clip: text;-webkit-text-fill-color: transparent;"}}>Highlight</span></h2>
+	        <h2 className='text-center' >Project <span >Highlight</span></h2>
             <div className="row">
                 <div className="col-md-12 col-sm-12">
                 <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>{ project_overview} </p>
@@ -42,7 +42,7 @@ const ProjectHighlights = (props) => {
              ]}> 
                       {props.settings.approved_banks.map((bank, index) => {
                 return (
-                    <div className="logo"  key={index}>
+                    <div className="logo" key={index}>
                         <a >
                         <Image width="250px" height="140px" src={bank.logo} alt={bank.name} />
                         </a>
