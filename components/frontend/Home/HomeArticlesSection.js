@@ -2,16 +2,19 @@ import Image from 'next/image'
 import moment from 'moment';
 import Link from 'next/link';
 import { Button, Card, SimpleGrid } from '@mantine/core';
+
+
+
 const HomeArticlesSection = (props) => {
-  let posts = [];
-  if(props.posts){
-    posts = props.posts;
+  let villas = [];
+  if(props.villas){
+    villas = props.villas.data;
   }
   return (
     
     <div className="block" id="features">
     <div className="container">
-      <h2>Floor Plans:</h2>
+      <h2>Villas:</h2>
       <div className="row">
         <SimpleGrid cols={3}
          breakpoints={[
@@ -19,20 +22,20 @@ const HomeArticlesSection = (props) => {
           { maxWidth: 755, cols: 2, spacing: 'sm' },
           { maxWidth: 600, cols: 1, spacing: 'sm' },
         ]}>
-          {posts.map((villa, index) => (
+          {villas.map((villa, index) => (
               <Card shadow="sm" key={index} p="sm" component='a' href={`/posts/${villa.id}`}>
                   <div className='home-villa-card'>
                     <Card.Section>
-                      {villa.imageOneUrl ? <Image src={villa.imageOneUrl} width="300px" height="300px" objectFit='cover'/>:"" }
+                      {villa.thumbnail ? <Image src={villa.thumbnail} width="300px" height="300px" objectFit='cover'/>:"" }
                     </Card.Section>
                     <div style={{marginLeft:'1em'}}>
                     <h3>{villa.bhk} BHK</h3>
-                    <h3>{villa.sqfeet} Sq.Feet</h3>
-                    <h3>{villa.landSize} Land Size</h3>
+                    <h3>{villa.sq_feet} Sq.Feet</h3>
+                    <h3>{villa.land_size} Land Size</h3>
                     <Button n sx={(theme)=>({
-                backgroundColor: '#background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)"',
+                backgroundColor: '#f4bc1c',
                 '&:hover':{
-                  background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)"
+                  backgroundColor: theme.colors.orange[7]
                 }
               })}>View Details</Button>
                     </div>
@@ -49,7 +52,7 @@ const HomeArticlesSection = (props) => {
           <a
             href="/posts"  
             className="btn btn-rounded  btn-primary" 
-            style={{background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
+            style={{backgroundColor:"#f4bc1c", fontSize:'1.3em', border:0, padding:"0.8em 1.3em"}}
           >View More</a>
         </div> }
     </div>

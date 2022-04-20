@@ -15,18 +15,24 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 const x = 0;
 
-export default function Home(props) {
-  const posts = JSON.parse(props.posts);
-  const images = JSON.parse(props.images);
 
-  
+import {getBanks,getGalleryImages,getHomepageSettings,getVillas} from '../utilities/api';
+
+export default function Home(props) {
+  // const posts = JSON.parse(props.posts);
+
+  const images = JSON.parse(props.images);
+  const settings = JSON.parse(props.settings);
+  const villas = JSON.parse(props.villas);
+  const banks = JSON.parse(props.banks);
+
 
   return (
-    <FrontLayout>
+    <FrontLayout settings={settings}>
     
-      <FeaturedVideo />
-      <ProjectHighlights />
-      <HomeArticlesSection posts={posts} />
+      <FeaturedVideo settings={settings} />
+      <ProjectHighlights settings={settings}/>
+      <HomeArticlesSection villas={villas} />
       <Amenities />
       <Specification />
       <HomeGallery images={images} />
@@ -36,18 +42,36 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps (context){
-  const res = await firebasePostsForHome();
-  const resImages = await firebaseGetGalleryImagesForHome();
+  // const res = await firebasePostsForHome();
+  const resImages = await getGalleryImages();
+  const settings = await getHomepageSettings();
+  const villas = await getVillas();
+  const banks = await getBanks();
+
   const props = {
     posts:[],
     status:false,
-    images:[]
+    images:[],
+    settings:[],
+    villas:[],
+    banks:[]
   };
-  if(res){
-      const posts = JSON.stringify(res);
-      props.posts = posts;
-      props.status = true;
+
+  if(villas){
+    props.villas = JSON.stringify(villas);
   }
+  if(banks){
+    props.banks = JSON.stringify(banks);
+  }
+  if(settings){
+    props.settings = JSON.stringify(settings.data[0]);
+  }
+
+  // if(res){
+  //     const posts = JSON.stringify(res);
+  //     props.posts = posts;
+  //     props.status = true;
+  // }
   if(resImages){
     const images = JSON.stringify(resImages);
     props.images = images;

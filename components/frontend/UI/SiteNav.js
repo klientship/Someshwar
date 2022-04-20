@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
-const SiteNav = () => {
+const SiteNav = (props) => {
 
 
   return (
@@ -13,7 +13,7 @@ const SiteNav = () => {
       <div className="left">
         <a className="brand" href="/" >
           <Image 
-              src="/static/img/Someshwar VISTA Logo_1.png"
+              src={props.settings.logo}
               alt="nothing"
               width="150px"
               height="84px"

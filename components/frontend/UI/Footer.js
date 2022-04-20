@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoLogoFacebook, IoLogoInstagram} from  "react-icons/io5";
 import { ActionIcon } from "@mantine/core";
-const Footer = () => {
+const Footer = (props) => {
   const onFacebookClick = ()=>{
     window.open('https://www.facebook.com/', '_blank');
   }
@@ -14,18 +14,13 @@ const Footer = () => {
     <div className="container">
     <Link href="/" >
       <a className="brand">
-        <Image    src="/static/img/Someshwar VISTA Logo_1.png" width="150px" height="100%" alt="" />
+        <Image src={props.settings.logo} width="150px" height="100%" alt="" />
       </a>
     </Link>
       <div className="row">
         <div className="col-md-4 col-sm-12">
         
-          Yamuna Asha City by Yamuna Homes & Design Pvt. Ltd.
-          The first of its kind premium residential sites 
-          consisting of 5,6,7 to 10 cents sites within a 46 
-          acres residential habitiat at Kulai,Mangaluru 
-          creating an expectional new community in the 
-          Historic Beach City of Mangalore.
+        {props.settings.footer_description}
 
           <div style={{marginTop:"1em", display:"flex", gap:"20px"}}>
        <img 
@@ -66,12 +61,12 @@ const Footer = () => {
 
             <figure style={{marginTop:"1em"}}> 
               <i style={{color:"#E67F10"}} className="fa fa-map-marker"></i> 
-              &nbsp; Vajra Realties 1st Floor, Essel Tower, Above Axis BankBunts Hostel, Mangalore.
+              &nbsp; {props.settings.address_line_1}<br/>{props.settings.address_line_2}
             </figure>
 
-            <figure style={{marginTop:"1em"}}> <i  style={{color:"#E67F10"}} className="fa fa-phone"></i> +91-9741735307, +91-9448912515</figure>
+            <figure style={{marginTop:"1em"}}> <i  style={{color:"#E67F10"}} className="fa fa-phone"></i> {props.settings.contact_number}</figure>
             <figure style={{marginTop:"1em"}}> <i style={{color:"#E67F10"}} className="fa fa-envelope-o"></i> <a href="mailto:sales@vajrarealties.com"
-                >sales@vajrarealties.com</a
+                >{props.settings.email}</a
               ></figure>
            
           </div>

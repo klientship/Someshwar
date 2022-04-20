@@ -1,7 +1,12 @@
 import { Grid, TextInput, Textarea, Button } from '@mantine/core';
 import WebLayout  from '../components/layout/WebLayout';
 import  {useRef} from 'react';
-const Contact = () => {
+
+
+import {getHomepageSettings} from '../utilities/api';
+
+const Contact = (props) => {
+    const settings  =  JSON.parse(props.settings);
     const nameInputRef =  useRef();
     const emailInputRef =  useRef();
     const messageInputRef =  useRef();
@@ -35,17 +40,17 @@ const Contact = () => {
         }
     }   
   return (
-      <WebLayout>
+      <WebLayout settings={settings}>
         <div style={{ width:"80%", margin:"100px auto"}}>
        <div className='text-center' style={{marginBottom:"3em", fontWeight:"bold"}}>
         <h2 style={{color:'#9F292B', margin:"0.5em"}}>Contact Us</h2>
             <p style={{fontWeight:"bold"}}>
-                Vajra Realties, 1st Floor, Essel Tower, Above Axis Bank, Bunts Hostel, Mangalore.
+            {settings.address_line_1} {settings.address_line_2}
                 <div>
-                    +91-9741735307, +91-9448912515
+                {settings.contact_number}
                 </div>
                 <div>
-                    info@vajrarealties.com
+                {settings.email}
                 </div>
         </p>
        </div>
@@ -96,5 +101,21 @@ const Contact = () => {
       </WebLayout>
   )
 }
+
+export async function getServerSideProps (context){
+    const settings = await getHomepageSettings();
+  
+      const props = {
+          images:[],
+          settings:[],
+        };
+        
+        if(settings){
+          props.settings = JSON.stringify(settings.data[0]);
+        }
+        return {
+          props
+        }
+  }
 
 export default Contact

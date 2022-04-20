@@ -4,28 +4,7 @@ import { SimpleGrid } from '@mantine/core';
 import Image from 'next/image';
 import Link from 'next/link';
 const HomeGallery = (props) => {
-    const [images, setImages] = useState([]);
 
-    let propImages = props.images;
-    if(!propImages){
-      propImages = [];
-    }
-    useEffect(()=>{
-        propImages.forEach(image => {
-          localGetImageUrl(image);
-        })
-      },[propImages]);
-    
-      const localGetImageUrl = (image)=>{
-        getImageUrl(image._location.path_)
-        .then(
-          urlObj =>{
-            setImages((prevImages)=> prevImages.concat(urlObj));
-          })
-        .catch(err=> console.log("There was an error inside usestate: ",err));
-      }
-
-      
   return (
     <div className="block" id="gallery">
     <div className="container">
@@ -35,9 +14,9 @@ const HomeGallery = (props) => {
         { maxWidth: 755, cols: 2, spacing: 'sm' },
         { maxWidth: 600, cols: 2, spacing: 'sm' },
       ]}>
-            {images.map((image, index)=>(
+             {props.images.map((image, index)=>(
             <div key={index}>
-                <Image src={image.url} width={400} height={400} alt="gallery image"   objectFit='cover' />
+                <Image src={image.img_path} width={400} height={400} alt="gallery image" objectFit='cover' />
              </div>
             ))}
            
@@ -46,10 +25,9 @@ const HomeGallery = (props) => {
           <a 
             className="btn btn-rounded btn-primary" 
             href="/gallery" 
-            style={{background:"linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%)", fontSize:'1.3em', border:0, padding:"0.5em 1em"}}
+            style={{backgroundColor:"#f4bc1c", fontSize:'1em', border:0, padding:"0.8em 1.3em"}}
           >View More</a>
         </div>}
-
         
     </div>
 </div>

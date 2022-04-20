@@ -7,11 +7,11 @@ const FrontLayout = (props) => {
   return (
     <div className="page-wrapper" id="page-top">
 
-      <SiteHeader />
+      <SiteHeader settings={props.settings} />
       <div id="page-content">
           {props.children}
       </div>
-      <Footer />
+      <Footer settings={props.settings} />
     </div>
   )
 }

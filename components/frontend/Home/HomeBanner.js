@@ -1,19 +1,44 @@
 import Image from "next/image";
 import { Button } from "@mantine/core";
-const HomeBanner = () => {
+import { useState, useEffect } from 'react';
+
+const HomeBanner = (props) => {
+
+    
+  const [x, setX] = useState(0);
+  function changeImage() {
+    // if (!document.hidden){
+        let temp = x
+            temp++;
+        if(temp >= props.settings.banners.length) {
+            setX(0)
+        }else{
+          setX(temp)   
+        // }
+      }
+    // setTimeout(changeImage(x,images), 3000);
+  }
+  
+ 
+useEffect(() => {
+  if (!document.hidden){
+      setInterval(changeImage, 3000); 
+  }
+ });
+
   return (
-    <div className="hero-section background-is-dark" id="homepage-banner">
+    <div className="hero-section background-is-dark" id="homepage-banner" style={{backgroundImage: "url(" + props.settings.banners[x].banner + ")"}}>
       <div className="wrapper">
         <div className="hero-title">
           <div className="container">
             <h1 className="animate">
-              Someshwar Vista:
+            {props.settings.project_location}  
               <br />
-              Kulashekar, Mangaluru
+             {props.settings.project_title}
             </h1>
             <p  className="animate">
                   Rera Number:<br />
-                  PRM/KA/RERA/1257/334/PR/180507/001647
+                  {props.settings.rera_number}
               </p>
               <Button sx={(theme)=>({
                 backgroundColor: '#9F292B',
