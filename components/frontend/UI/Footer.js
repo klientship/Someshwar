@@ -25,14 +25,14 @@ const Footer = (props) => {
           <div style={{marginTop:"1em", display:"flex", gap:"20px"}}>
        <img 
        onClick={onFacebookClick}
-              src="/static/img/facebook 2.png"
+              src="/img/facebook 2.png"
               alt="nothing"
               width="35px"
               height="35px"
           />
           <img 
           onClick={onInstagramClick}
-              src="/static/img/instagram 2.png"
+              src="/img/instagram 2.png"
               alt="nothing"
               width="35px"
               height="35px"  
@@ -88,7 +88,7 @@ const Footer = (props) => {
     </div>
     <div className="background-wrapper">
       <div className="bg-transfer opacity-30">
-        <Image src="/static/img/footer-bg.jpg" width="150px" height="100%" alt="" />
+        <Image src="/img/footer-bg.jpg" width="150px" height="100%" alt="" />
       </div>
       <div className="background-color background-color-black"></div>
     </div>

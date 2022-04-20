@@ -12,7 +12,7 @@ const FeaturesBar = () => {
           >
             <i className="icon"
               >
-                  <Image src="/static/img/icon-white-shield.png" height="81px" width="74px" alt="White Shield" />
+                  <Image src="/img/icon-white-shield.png" height="81px" width="74px" alt="White Shield" />
             </i>
             <div className="description">
               <h3>Modern & Safe Living</h3>
@@ -34,7 +34,7 @@ const FeaturesBar = () => {
           >
             <i className="icon"
               >
-                <Image src="/static/img/icon-white-pin.png" height="81px" width="74px" alt="White Pin" />
+                <Image src="/img/icon-white-pin.png" height="81px" width="74px" alt="White Pin" />
                 </i>
             <div className="description">
               <h3>Peaceful Location</h3>
@@ -56,7 +56,7 @@ const FeaturesBar = () => {
           >
             <i className="icon"
               >
-                <Image src="/static/img/icon-white-wallet.png" height="81px" width="74px" alt="White Pin" />
+                <Image src="/img/icon-white-wallet.png" height="81px" width="74px" alt="White Pin" />
             </i>
             <div className="description">
               <h3>Great Starting Prices</h3>
@@ -74,7 +74,7 @@ const FeaturesBar = () => {
     </div>
     <div className="background-wrapper">
       <div className="bg-transfer opacity-15">
-        <Image src="/static/img/bg-01.jpg" height="81px" width="74px" alt="Background" />
+        <Image src="/img/bg-01.jpg" height="81px" width="74px" alt="Background" />
       </div>
       <div className="background-color background-color-black"></div>
     </div>

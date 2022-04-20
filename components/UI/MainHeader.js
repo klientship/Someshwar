@@ -14,7 +14,7 @@ const MainHeader = ({opened,setOpened}) => {
             />
             </MediaQuery>
 
-            <Image src="/static/img/yamuna logo.png" height="70%" width="140px" /> 
+            <Image src="/img/yamuna logo.png" height="70%" width="140px" /> 
             <h3 style={{marginLeft:"20px"}}>Website Management Dashboard</h3>
         </div>
     </Header>

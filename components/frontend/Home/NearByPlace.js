@@ -16,9 +16,9 @@ const NearByPlace = () => {
                 ]}
             >
                 <div>
-                    <a href="/static/img/near_place/surathkal.jpg" className="gallery-item image-popup">
+                    <a href="/img/near_place/surathkal.jpg" className="gallery-item image-popup">
                         <div className="image bg-transfer">
-                            <img src="/static/img/near_place/surathkal.jpg" alt=""/>
+                            <img src="/img/near_place/surathkal.jpg" alt=""/>
                         </div>
                         
                     </a>
@@ -26,41 +26,41 @@ const NearByPlace = () => {
                 </div>
 
                 <div>
-                    <a href="/static/img/near_place/airport.jpg" className="gallery-item image-popup">
+                    <a href="/img/near_place/airport.jpg" className="gallery-item image-popup">
                         <div className="image bg-transfer">
-                            <img src="/static/img/near_place/airport.jpg" alt=""/>
+                            <img src="/img/near_place/airport.jpg" alt=""/>
                         </div>
                     </a>
                     <span className='gallery-image-text'>MANGALORE INTERNATIONAL AIRPORT <span>12KM</span></span>
                 </div>
                 <div>
-                    <a href="/static/img/near_place/ryaninternationalschool.jpg" className="gallery-item image-popup">
+                    <a href="/img/near_place/ryaninternationalschool.jpg" className="gallery-item image-popup">
                         <div className="image bg-transfer">
-                            <img src="/static/img/near_place/ryaninternationalschool.jpg" alt=""/>
+                            <img src="/img/near_place/ryaninternationalschool.jpg" alt=""/>
                         </div>
                     </a>
                     <span className='gallery-image-text'>RYAN INTERNATIONAL SCHOOL <span>0.5KM</span></span>
                 </div>
                 <div>
-                    <a href="/static/img/near_place/panambur.jpg" className="gallery-item image-popup">
+                    <a href="/img/near_place/panambur.jpg" className="gallery-item image-popup">
                         <div className="image bg-transfer">
-                            <img src="/static/img/near_place/panambur.jpg" alt=""/>
+                            <img src="/img/near_place/panambur.jpg" alt=""/>
                         </div>
                     </a>
                     <span className='gallery-image-text'>PANAMBUR BEACH <span>2KM</span></span> 
                 </div>
                 <div>
-                    <a href="/static/img/near_place/nitk.jpg" className="gallery-item image-popup">
+                    <a href="/img/near_place/nitk.jpg" className="gallery-item image-popup">
                         <div className="image bg-transfer">
-                            <img src="/static/img/near_place/nitk.jpg" alt=""/>
+                            <img src="/img/near_place/nitk.jpg" alt=""/>
                         </div>
                     </a>
                     <span className='gallery-image-text'>NATIONAL INSTITUTE OF TECHNOLOGY KARNATAKA <span>4KM</span></span> 
                 </div>
                 <div>
-                    <a href="/static/img/near_place/mrpl.jpg" className="gallery-item image-popup">
+                    <a href="/img/near_place/mrpl.jpg" className="gallery-item image-popup">
                         <div className="image bg-transfer">
-                            <img src="/static/img/near_place/mrpl.jpg" alt=""/>
+                            <img src="/img/near_place/mrpl.jpg" alt=""/>
                         </div>
                     </a>
                     <span className='gallery-image-text'>MRPL <span>6KM</span></span> 

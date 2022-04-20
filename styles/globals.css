@@ -101,7 +101,7 @@ text-transform: capitalize;
 
 
 #homepage-banner {
-  background-image: url('/static/img/hero-image.jpg');
+  background-image: url('/img/hero-image.jpg');
   background-size: cover;
 }
 

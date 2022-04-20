@@ -15,7 +15,7 @@ const Amenities = () => {
       ]}>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/002-car-parking.svg"
+              src="/img/amenities/002-car-parking.svg"
               width="70px"
               height="70%"
               alt="car parking"
@@ -25,7 +25,7 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/008-lift.svg"
+              src="/img/amenities/008-lift.svg"
               width="70px"
               height="70%"
               alt="CCTV Cameras"
@@ -35,7 +35,7 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/006-fire-safety.svg"
+              src="/img/amenities/006-fire-safety.svg"
               width="70px"
               height="70%"
               alt="Club House"
@@ -45,7 +45,7 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/007-intercom.svg"
+              src="/img/amenities/007-intercom.svg"
               width="70px"
               height="70%"
               alt="Club House"
@@ -55,7 +55,7 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/001-24hr-backup-electricity.svg"
+              src="/img/amenities/001-24hr-backup-electricity.svg"
               width="70px"
               height="70%"
               alt="Fire Saftey"
@@ -65,7 +65,7 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/010-security.svg"
+              src="/img/amenities/010-security.svg"
               width="70px"
               height="70%"
               alt="Intercom"
@@ -75,7 +75,7 @@ const Amenities = () => {
           </div>
           <div className="amenitiesImage">
             <Image
-              src="/static/img/amenities/playground.svg"
+              src="/img/amenities/playground.svg"
               width="70px"
               height="70%"
               alt="Play Area"

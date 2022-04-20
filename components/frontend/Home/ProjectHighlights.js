@@ -20,9 +20,9 @@ const ProjectHighlights = (props) => {
                     <p style={{fontWeight: "bold",fontFamily: "Montserrat"}} ><strong>Project Type:</strong> {project_type}</p><br />
 
                         <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}><strong>Project Status:</strong> {project_status}</p><br />
-                        
+                        <h3 className='mb-0 pb-0'>Builder:</h3>
                         <p style={{fontWeight: "bold",fontFamily: "Montserrat"}}>
-                          <h3 className='mb-0 pb-0'>Builder:</h3>
+                       
                           Someshwar Promoters & Developers<br />
                         
                           Near Lotus Mall, Kulshekar Mangaluru</p>

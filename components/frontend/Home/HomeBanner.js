@@ -65,7 +65,7 @@ useEffect(() => {
         <div className="hero-slide">
           <div className="bg-transfer">
             <Image
-              src="/static/img/hero-image.jpg"
+              src="/img/hero-image.jpg"
               width="100%"
               height="100%"
               alt=""
@@ -75,7 +75,7 @@ useEffect(() => {
         <div className="hero-slide">
           <div className="bg-transfer">
             <Image
-              src="/static/img/hero-image.jpg"
+              src="/img/hero-image.jpg"
               width="100%"
               height="100%"
               alt=""
@@ -85,7 +85,7 @@ useEffect(() => {
         <div className="hero-slide">
           <div className="bg-transfer">
             <Image
-              src="/static/img/hero-image.jpg"
+              src="/img/hero-image.jpg"
               width="100%"
               height="100%"
               alt=""

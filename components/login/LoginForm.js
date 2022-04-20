@@ -54,7 +54,7 @@ const LoginForm = () => {
 
   return (
     <form className={styles.form} onSubmit={loginHandler}>
-      <Image src="/static/img/yamuna logo.png" height="70%" width="140px" />
+      <Image src="/img/yamuna logo.png" height="70%" width="140px" />
         <h3 className={styles.heading}>Welcome To Yamuna Asha City Dashboard Login</h3>
         {error && !error.status && error.source === "OTHER" && (
             <ErrorMessage message={error.message} />
