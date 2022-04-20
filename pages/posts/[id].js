@@ -25,7 +25,7 @@ const ViewPost = (props) => {
               </span>
             </a>
 
-            <p class="mt-2">{post.description}</p>
+            <p className="mt-2">{post.description}</p>
 
             <div
               className="gallery text-center"
@@ -42,7 +42,7 @@ const ViewPost = (props) => {
               >
 
             {post.images.map((image, index) => (
-              <PostImageView src={image.image} />
+              <PostImageView src={image.image} key={index}/>
             ))}
                 {/* {post.imageOneUrl && <PostImageView src={post.imageOneUrl} />}
                 {post.imageTwoUrl && <PostImageView src={post.imageTwoUrl} />}

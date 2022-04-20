@@ -82,8 +82,8 @@ const Footer = (props) => {
         </a>
       </div> */}
       {
-      <a href="https://api.whatsapp.com/send?phone=919741735307" class="float" target="_blank">
-					<i class="fa fa-whatsapp my-float"></i>
+      <a href="https://api.whatsapp.com/send?phone=919741735307" className="float" rel="noreferrer"  target="_blank">
+					<i className="fa fa-whatsapp my-float"></i>
 					</a>}
     </div>
     <div className="background-wrapper">

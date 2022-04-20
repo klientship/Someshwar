@@ -8,7 +8,7 @@ const Specification = () => {
   return (
     <div className="block background-is-dark" style={{backgroundColor:"#EFFFFD"}} id="about">
     <div className="container" id="pricing" >
-        <h2 class="text-center" style={{color:"black",fontSize:"39px" }}>Specifications</h2>
+        <h2 className="text-center" style={{color:"black",fontSize:"39px" }}>Specifications</h2>
         <div className="row one" >
 
 
