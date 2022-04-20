@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['yamuna-bucket.s3.ap-south-1.amazonaws.com','firebasestorage.googleapis.com','yamunaashacity.com','127.0.0.1','admin.yamunaashacity.com'],
+    domains: ['someshwarvista.com','someshwar-bucket.s3.ap-south-1.amazonaws.com','yamuna-bucket.s3.ap-south-1.amazonaws.com','firebasestorage.googleapis.com','yamunaashacity.com','127.0.0.1','admin.yamunaashacity.com'],
   },
 }
 
