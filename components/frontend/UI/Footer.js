@@ -10,7 +10,7 @@ const Footer = (props) => {
     window.open('https://instagram.com/', '_blank');
   }
   return (
-    <footer id="page-footer" className="block background-is-dark" style={{backgroundColor:"#0081ba"}}>
+    <footer id="page-footer" className="block background-is-dark" style={{backgroundColor:"#024A56"}}>
     <div className="container">
     <Link href="/" >
       <a className="brand">

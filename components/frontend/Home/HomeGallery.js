@@ -3,6 +3,8 @@ import { getImageUrl } from '../../../utilities/firebase/gallery';
 import { SimpleGrid } from '@mantine/core';
 import Image from 'next/image';
 import Link from 'next/link';
+import PostImageView from "../../../components/posts/PostImageView";
+
 const HomeGallery = (props) => {
 
   return (
@@ -14,9 +16,10 @@ const HomeGallery = (props) => {
         { maxWidth: 755, cols: 2, spacing: 'sm' },
         { maxWidth: 600, cols: 2, spacing: 'sm' },
       ]}>
-             {props.images.map((image, index)=>(
+           {props.images.map((image, index)=>(
             <div key={index}>
-                <Image src={image.img_path} width={400} height={400} alt="gallery image" objectFit='cover' />
+                   <PostImageView src={image.img_path}  key={index} />
+                {/* <Image src={image.img_path} width={400} height={400} alt="gallery image" objectFit='cover' /> */}
              </div>
             ))}
            

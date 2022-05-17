@@ -8,6 +8,7 @@ import '../public/fonts/font-awesome.css';
 import '../public/css/style.css';
 import SiteScripts from './scripts';
 
+
 function MyApp({ Component, pageProps }) {
   return <NotificationsProvider>
             <Component {...pageProps} />

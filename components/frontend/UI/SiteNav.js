@@ -5,7 +5,7 @@ const SiteNav = (props) => {
 
 
   return (
-    <nav className="navigation background-is-dark show-background" style={{backgroundColor:"##012a5d"}}>
+    <nav className="navigation background-is-dark show-background" style={{backgroundColor:"#024A56"}}>
       
     
     <div className="container">
