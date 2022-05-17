@@ -14,7 +14,7 @@ const HomeArticlesSection = (props) => {
     
     <div className="block" id="features">
     <div className="container">
-      <h2>Villas:</h2>
+      <h2>Floor Plans:</h2>
       <div className="row">
         <SimpleGrid cols={3}
          breakpoints={[
