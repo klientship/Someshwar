@@ -59,7 +59,7 @@ const ViewPost = (props) => {
 
                   <li className="villa-feature-list__item"><BsHouseDoorFill /> {post.bhk} BHK</li>
                   <li className="villa-feature-list__item"><BsHouseDoorFill /> {post.sq_feet} Sq Feet </li>
-                  <li className="villa-feature-list__item"><BsHouseDoorFill /> Land Size: {post.land_size} </li>
+                  {/* <li className="villa-feature-list__item"><BsHouseDoorFill /> Land Size: {post.land_size} </li> */}
                   <li className="villa-feature-list__item"><BsHouseDoorFill /> Price: {post.price}</li>
                 </ul>
                 <a href="/contact" className="btn btn-primary btn-lg">Enquiry now</a>

@@ -16,7 +16,7 @@ import Head from 'next/head';
 const x = 0;
 
 
-import {getBanks,getGalleryImages,getHomepageSettings,getVillas} from '../utilities/api';
+import {getBanks,getGalleryImages,getHomepageSettings,getVillas,getNearByLocations} from '../utilities/api';
 
 export default function Home(props) {
   // const posts = JSON.parse(props.posts);
@@ -25,6 +25,7 @@ export default function Home(props) {
   const settings = JSON.parse(props.settings);
   const villas = JSON.parse(props.villas);
   const banks = JSON.parse(props.banks);
+  const places = JSON.parse(props.places);
 
 
   return (
@@ -36,7 +37,7 @@ export default function Home(props) {
       <Amenities />
       <Specification />
       <HomeGallery images={images} />
-      <NearByPlace />
+      <NearByPlace places={places}/>
     </FrontLayout>
   )
 }
@@ -47,6 +48,7 @@ export async function getServerSideProps (context){
   const settings = await getHomepageSettings();
   const villas = await getVillas();
   const banks = await getBanks();
+  const places = await getNearByLocations();
 
   const props = {
     posts:[],
@@ -54,7 +56,8 @@ export async function getServerSideProps (context){
     images:[],
     settings:[],
     villas:[],
-    banks:[]
+    banks:[],
+    places:[]
   };
 
   if(villas){
@@ -65,6 +68,9 @@ export async function getServerSideProps (context){
   }
   if(settings){
     props.settings = JSON.stringify(settings.data[0]);
+  }
+  if(places){
+    props.places = JSON.stringify(places);
   }
 
   // if(res){

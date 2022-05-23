@@ -28,6 +28,11 @@ export const getBanks = async()=>{
     const data = await response.json();
     return data.data
 }
+export const getNearByLocations = async()=>{
+    const response = await fetch(`${url}/api/near-by-locations`)
+    const data = await response.json();
+    return data
+}
 export const sendBrochureRequest = async(name,email,phone)=>{
     const response = await fetch(`${url}/api/brochure-requests`, {
         method: 'POST',

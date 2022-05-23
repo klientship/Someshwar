@@ -18,20 +18,21 @@ const HomeArticlesSection = (props) => {
       <div className="row">
         <SimpleGrid cols={3}
          breakpoints={[
-          { maxWidth: 980, cols: 3, spacing: 'md' },
+          { maxWidth: 1000, cols: 3, spacing: 'md' },
           { maxWidth: 755, cols: 2, spacing: 'sm' },
-          { maxWidth: 600, cols: 1, spacing: 'sm' },
+          { maxWidth: 600, cols: 2, spacing: 'sm' },
         ]}>
           {villas.map((villa, index) => (
               <Card shadow="sm" key={index} p="sm" component='a' href={`/posts/${villa.id}`}>
                   <div className='home-villa-card'>
                     <Card.Section>
-                      {villa.thumbnail ? <Image src={villa.thumbnail} width="300px" height="300px" objectFit='cover'/>:"" }
+                      {villa.thumbnail ? <Image src={villa.thumbnail} width="150px" height="150px" objectFit='cover'/>:"" }
                     </Card.Section>
                     <div style={{marginLeft:'1em'}}>
                     <h3>{villa.bhk} BHK</h3>
                     <h3>{villa.sq_feet} Sq.Feet</h3>
-                    <h3>{villa.land_size} Land Size</h3>
+                    <h3>₹{villa.price}</h3>
+                    {/* <h3>{villa.land_size} Land Size</h3> */}
                     <Button n sx={(theme)=>({
                 backgroundColor: '#f4bc1c',
                 '&:hover':{

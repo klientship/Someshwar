@@ -4,14 +4,15 @@ import { IoLogoFacebook, IoLogoInstagram} from  "react-icons/io5";
 import { ActionIcon } from "@mantine/core";
 const Footer = (props) => {
   const onFacebookClick = ()=>{
-    window.open('https://www.facebook.com/', '_blank');
+    window.open('https://www.facebook.com/VajraRealtiesMangalore', '_blank');
   }
   const onInstagramClick = ()=>{
-    window.open('https://instagram.com/', '_blank');
+    window.open('https://www.instagram.com/someshwar_vista1/ ', '_blank');
   }
   return (
     <footer id="page-footer" className="block background-is-dark" style={{backgroundColor:"#024A56"}}>
     <div className="container">
+   
     <Link href="/" >
       <a className="brand">
         <Image src={props.settings.logo} width="150px" height="100%" alt="" />

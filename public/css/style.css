@@ -457,7 +457,8 @@ navigation .right .navigation-links {
 /* 2. Elements Styling */
 body {
   color: #1f1f1f;
-  font-size: 13px;
+  font-size: 16px;
+  text-align: justify;
   font-family: 'Montserrat', sans-serif;
   position: relative;
 }
@@ -3289,7 +3290,7 @@ form .status i {
 }
 @media (max-width: 767px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   blockquote {
