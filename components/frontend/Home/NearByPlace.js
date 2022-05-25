@@ -23,7 +23,7 @@ const NearByPlace = (props) => {
 {places.map((place, index) => (
             
             <div key={index}>
-            <a href="/img/near_place/surathkal.jpg" className="gallery-item image-popup">
+            <a href={place.img} className="gallery-item image-popup">
                 <div className="image bg-transfer">
                     <img src={place.img} alt=""/>
                 </div>
