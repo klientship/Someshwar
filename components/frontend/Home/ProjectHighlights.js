@@ -34,7 +34,7 @@ const ProjectHighlights = (props) => {
 
 
         <div className="container col-md-12 text-center">
-        <h3 >Approved Banks</h3>
+        <h2 >Approved Banks</h2>
         <SimpleGrid cols={3} spacing="xs"    breakpoints={[
         { maxWidth: 980, cols: 3, spacing: 'md' },
         { maxWidth: 755, cols: 2, spacing: 'sm' },
