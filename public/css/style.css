@@ -458,7 +458,7 @@ navigation .right .navigation-links {
 body {
   color: #1f1f1f;
   font-size: 16px;
-  text-align: justify;
+  /* text-align: justify; */
   font-family: 'Montserrat', sans-serif;
   position: relative;
 }
