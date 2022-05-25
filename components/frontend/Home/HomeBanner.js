@@ -4,30 +4,43 @@ import { useState, useEffect } from 'react';
 
 const HomeBanner = (props) => {
 
+  const images = props.settings.banners;
+  console.log(props.settings.banners);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+      const intervalId = setInterval(() => {
+          if(currentIndex === images.length - 1) {
+              setCurrentIndex(0);
+          } 
+          else {
+               setCurrentIndex(currentIndex + 1);
+          }
+      }, 5000)
+      
+      return () => clearInterval(intervalId);
+  }, [])
+
     
-  const [x, setX] = useState(0);
-  function changeImage() {
-    // if (!document.hidden){
-        let temp = x
-            temp++;
-        if(temp >= props.settings.banners.length) {
-            setX(0)
-        }else{
-          setX(temp)   
-        // }
-      }
-    // setTimeout(changeImage(x,images), 3000);
-  }
+  // const [x, setX] = useState(0);
+  // function changeImage() {
+  //   // if (!document.hidden){
+  //       let temp = x
+  //           temp++;
+  //       if(temp >= props.settings.banners.length) {
+  //           setX(0)
+  //       }else{
+  //         setX(temp)   
+  //       // }
+  //     }
+  //   // setTimeout(changeImage(x,images), 3000);
+  // }
   
  
-useEffect(() => {
-  // if (!document.hidden){
-  //     setInterval(changeImage, 3000); 
-  // }
- });
 
   return (
-    <div className="hero-section background-is-dark" id="homepage-banner" style={{backgroundImage: "url(" + props.settings.banners[x].banner + ")"}}>
+    <div className="hero-section background-is-dark" id="homepage-banner" style={{backgroundImage: "url(" + images[currentIndex].banner + ")"}}>
       <div className="wrapper">
         <div className="hero-title">
           <div className="container">
