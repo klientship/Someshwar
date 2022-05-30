@@ -149,3 +149,7 @@ text-transform: capitalize;
     width: 121%;
 }
 }
+
+#homepage-banner{
+  transition: 3s;  
+}
